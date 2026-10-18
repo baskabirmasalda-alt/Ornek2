@@ -1,6 +1,6 @@
 # Bölüm 1 – Kırmızı Başlıklı Kız'ın Bilinmeyen Gerçek Sonu
 
-**Süre hedefi:** ~10–11 dk (anlatım ~1.250 kelime) · **Anlatıcı:** Fatih Çetinkaya (ElevenLabs) · **Kitle:** 13+ / yetişkin
+**Süre:** bu taslak ~580 kelime, yaklaşık 5 dk anlatım. Hedef 8–10 dk için üretimden önce Grimm ve köy versiyonu bölümleri genişletilecek · **Anlatıcı:** Fatih Çetinkaya (ElevenLabs) · **Kitle:** 13+ / yetişkin
 **Görsel tarz:** Masal kitabı çizimi, gece tonları; mevcut karakterler (`assets/ep01/kiz.png`, `kurt.png`) referans.
 Köşeli parantezler sahne ve görsel notlarıdır, seslendirilmez.
 
