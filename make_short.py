@@ -252,7 +252,8 @@ VIGNETTE = make_vignette()
 
 
 # ---------------------------------------------------------------- müzik
-def music(melody=None, transpose=0):
+def music(melody=None, transpose=0, whooshes=(3.6, 7.2, 11.2, 15.2, 18.2),
+          tense=(15.2, 18.2), drone=(7.2, 18.2), out_path="music.wav"):
     n = int(SR * DUR)
     t = np.arange(n) / SR
     out = np.zeros(n)
@@ -272,7 +273,7 @@ def music(melody=None, transpose=0):
     beat = 0.3125  # 96 BPM sekizlik
     for k in range(int(DUR / beat)):
         m = melody[k % len(melody)] + transpose
-        if 15.2 < k * beat < 18.2:
+        if tense[0] < k * beat < tense[1]:
             m -= 1  # gerilim sahnesinde detone
         note(hz(m), k * beat, vol=0.16 if k % 2 else 0.21)
 
@@ -286,14 +287,14 @@ def music(melody=None, transpose=0):
             out[s:e] += 0.05 * env * np.sin(2 * np.pi * hz(m - 12) * tt)
 
     # Kurt sahnesinde derin drone
-    s, e = int(7.2 * SR), int(18.2 * SR)
+    s, e = int(drone[0] * SR), int(drone[1] * SR)
     tt = np.arange(e - s) / SR
     env = np.minimum(1, tt / 1.5) * np.minimum(1, tt[::-1] / 1.0)
     out[s:e] += 0.09 * env * np.sin(2 * np.pi * 55 * tt) * (0.7 + 0.3 * np.sin(2 * np.pi * 0.5 * tt))
 
     # Geçiş "whoosh" efektleri
     rng = np.random.default_rng(1)
-    for st in [3.6, 7.2, 11.2, 15.2, 18.2]:
+    for st in whooshes:
         s = int((st - 0.4) * SR)
         L = int(0.7 * SR)
         noise = rng.standard_normal(L)
@@ -308,7 +309,7 @@ def music(melody=None, transpose=0):
     out = out / np.max(np.abs(out)) * 0.85
     pcm = (out * 32767).astype(np.int16)
     stereo = np.stack([pcm, pcm], axis=1)
-    with wave.open("music.wav", "wb") as wf:
+    with wave.open(out_path, "wb") as wf:
         wf.setnchannels(2)
         wf.setsampwidth(2)
         wf.setframerate(SR)
