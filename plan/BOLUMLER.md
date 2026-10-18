@@ -6,8 +6,8 @@ Her bölümün iki yarısı var: **gerçek köken** (masalın ilk ve unutulmuş 
 | # | Başlık | Kanca (ilk 15 sn) | Yorum sorusu |
 | --- | --- | --- | --- |
 | 1 | Kırmızı Başlıklı Kız'ın Bilinmeyen Gerçek Sonu | "Bu masalın ilk versiyonunda avcı yoktu. Kimse gelmedi." | Sence kötü olan kimdi? |
-| 2 | Külkedisi Aslında Böyle Bitmiyordu | "Üvey kardeşler ayakkabıya sığmak için ayaklarını kesti." | Külkedisi intikam almalı mıydı? |
-| 3 | Pamuk Prenses'in Kraliçesine Ne Oldu? | "Düğünde kraliçeye kızgın demir ayakkabılar giydirildi." | Kraliçe kötü müydü, kıskanç mı? |
+| 2 | Külkedisi'nin Ayakkabısı Camdan Değildi | "Bu masalda peri anne yoktu. Ayakkabı da camdan değildi." | Külkedisi kardeşlerini affetmeli miydi? |
+| 3 | Pamuk Prenses'in Kraliçesine Ne Oldu? | "Bu masalın ilk hâlinde kötü kalpli kraliçe, Pamuk Prenses'in üvey annesi değildi." | Kraliçe kötü müydü, kıskanç mı? |
 | 4 | Hansel ile Gretel'in Gerçek Hikâyesi | "Bu masal, ailelerin çocuklarını besleyemediği kıtlık yıllarıyla ilişkilendiriliyor." | Asıl suçlu cadı mı, baba mı? |
 | 5 | Küçük Deniz Kızı'nın Unutulan Sonu | "Orijinal masalda prensle evlenmiyor." | Sen olsan sesini verir miydin? |
 | 6 | Uyuyan Güzel Aslında Uyumuyordu | "En eski versiyonda onu öpücük uyandırmıyor." | Bu masal bugün anlatılmalı mı? |
@@ -19,4 +19,7 @@ Her bölümün iki yarısı var: **gerçek köken** (masalın ilk ve unutulmuş 
 | 12 | DERLEME: Uyumadan Önce Dinle (1–6. bölümler) | – | En çok hangi masal şaşırttı? |
 
 **Not:** Gerçek köken bölümlerindeki bilgileri her senaryoda kaynaklardan kontrol edip öyle yazacağım.
-Kan ve şiddet sahneleri gösterilmez, yalnızca anlatılır; ton gizemli ama ürkütücü değil.
+
+**Ton kuralı:** Kan, şiddet, yaralama ve vahşet yok; ne görselde ne anlatımda. Orijinal masaldaki sert ayrıntılar
+atlanır ya da tek cümleyle yumuşak geçilir ("kardeşler ayakkabıya sığmak için her yolu denedi"). Kanca şok değil,
+şaşırtıcı bilgiyle kurulur. Ton merak uyandırıcı, sıcak, ailece izlenebilir.
