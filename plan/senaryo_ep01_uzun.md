@@ -1,6 +1,6 @@
 # Bölüm 1 – Kırmızı Başlıklı Kız'ın Bilinmeyen Gerçek Sonu
 
-**Süre:** bu taslak ~580 kelime, yaklaşık 5 dk anlatım. Hedef 8–10 dk için üretimden önce Grimm ve köy versiyonu bölümleri genişletilecek · **Anlatıcı:** Fatih Çetinkaya (ElevenLabs) · **Kitle:** 13+ / yetişkin
+**Süre:** ~820 kelime, yaklaşık 7–8 dk anlatım · **Anlatıcı:** Fatih Çetinkaya (ElevenLabs) · **Kitle:** 13+ / yetişkin
 **Görsel tarz:** Masal kitabı çizimi, gece tonları; mevcut karakterler (`assets/ep01/kiz.png`, `kurt.png`) referans.
 Köşeli parantezler sahne ve görsel notlarıdır, seslendirilmez.
 
@@ -42,6 +42,10 @@ Ve Perrault'nun masalı burada bitiyor. Kurt kızı yiyor. Avcı yok. Kurtuluş 
 
 Masalın sonunda kısa bir ahlak dersi var. Perrault, genç kızları uyarıyor: bazı kurtlar dişlerini göstermez. Tatlı dilli, kibar ve evlerine kadar eşlik eden kurtlar, hepsinin en tehlikelisidir. Yani bu masal, aslında çocuklar için değil, saray salonlarındaki genç kızlar için yazılmış bir uyarıydı.
 
+[SAHNE 6b: Pelerinin kırmızı rengine yakın plan, mum ışığı]
+
+Peki o meşhur kırmızı başlık nereden çıktı? Köylerde anlatılan eski versiyonlarda böyle bir başlık yok. Kırmızı başlığı masala Perrault ekledi. Kırmızı; dikkat çeken, göze batan, tehlikeyi üzerine çeken bir renkti. Ve o günden sonra bu kız hep aynı adla anıldı: Kırmızı Başlıklı Kız.
+
 ### 3:30 – İkinci son: 1812, Almanya
 
 [SAHNE 7: Alman köyü, iki kardeş ihtiyar bir kadını dinleyip not alıyor]
@@ -56,7 +60,15 @@ Kurt kızı ve büyükanneyi yuttuktan sonra yatakta horlayarak uyuyor. Oradan g
 
 Sonra kurdun karnına taş dolduruyorlar. Kurt uyanıp kaçmak istediğinde taşların ağırlığıyla yere yığılıyor.
 
-Bugün bildiğimiz masal, işte bu. Kurtarıcı bir avcı ve mutlu bir son. Ama Grimm kardeşlerin bu sonu nereden bulduğu hâlâ tartışılıyor.
+Bugün bildiğimiz masal, işte bu. Kurtarıcı bir avcı ve mutlu bir son.
+
+[SAHNE 9b: Taş bir yalak, kulübenin çatısında sinsi bir kurt]
+
+Ama Grimm kardeşlerin kitabında, çoğu kişinin hiç duymadığı ikinci bir son daha var. Bir gün başka bir kurt, kızın yolunu keser. Bu kez kız ona hiç cevap vermez ve doğruca büyükannesine koşar. Kurt kulübenin çatısına çıkıp beklemeye başlar.
+
+Büyükanne bir fikir bulur. Kızdan, sosis haşladığı suyu kapının önündeki taş yalağa dökmesini ister. Kokuyu alan kurt aşağı doğru eğilir, eğilir... ve sonunda dengesini kaybedip yalağa düşer ve boğulur.
+
+Bu ikinci sonda avcı yok. Kız ve büyükanne, ilk masaldan ders almış ve kendi başlarının çaresine bakmışlardır.
 
 ### 5:30 – Unutulan son: Köylerin masalı
 
@@ -66,6 +78,10 @@ Bugün bildiğimiz masal, işte bu. Kurtarıcı bir avcı ve mutlu bir son. Ama 
 
 [SAHNE 11: Kız, kurdun yatağının yanında, gözleri kurnazca parlıyor]
 
+[SAHNE 10b: Ormanda iki yol ayrımı, birinde iğneler, diğerinde toplu iğneler parlıyor]
+
+Bu masalda kız, ormanda bir yol ayrımında kurtla karşılaşır. Kurt sorar: "Hangi yoldan gideceksin? İğnelerin yolundan mı, toplu iğnelerin yolundan mı?" Bu garip soru, o dönemde terzilik öğrenen genç kızların dünyasından geliyordu. Bazı anlatılarda kurt bile değil, insan kılığına girebilen bir yaratıktır.
+
 Bu versiyonda kız ne saf ne de çaresiz. Kurdun büyükanne olmadığını fark ediyor. Ve kaçmak için bir bahane uyduruyor: "Dışarı çıkmam lazım, hemen dönerim."
 
 [SAHNE 12: Kızın ayağına bağlı uzun bir ip, ipin ucu bir ağaca bağlanmış]
@@ -73,6 +89,8 @@ Bu versiyonda kız ne saf ne de çaresiz. Kurdun büyükanne olmadığını fark
 Kurt ona güvenmiyor ve ayağına bir ip bağlıyor. Kız dışarı çıkınca ipi bir ağaca bağlıyor ve koşarak kaçıyor. Kurt ipi çektiğinde, ucunda sadece bir ağaç buluyor.
 
 Bu masalda kimse kızı kurtarmıyor. Kız kendi aklıyla kendini kurtarıyor.
+
+Ve belki de bu yüzden, kitaplara geçerken bu son değiştirildi. Saray salonlarında okunacak bir masalda, kendi kendini kurtaran bir köylü kızı pek istenmiyordu. Önce yenilen bir kız, sonra kurtarılan bir kız geldi. Akıllı kız ise ocak başında kaldı.
 
 ### 7:00 – Başka bir masalda
 
@@ -82,6 +100,8 @@ Peki ya hikâyeyi hep yanlış taraftan dinlediysek? Ya kurt da bu masalın kahr
 
 [SAHNE 14: Kurdun gözü, boynunda yeşil bir şişe]
 
+Bu kanalın adı boşuna Başka Bir Masalda değil. Çünkü şimdi sana bu masalın hiçbir kitapta yazmayan versiyonunu anlatacağım.
+
 Başka bir masalda, o gece ormanda bir kurt vardı. Büyükanne haftalardır hastaydı ve köydekilerin hiçbiri ormanın derinindeki kulübeye gitmeye cesaret edemiyordu. Bir tek, yıllar önce büyükannenin yaralı bir yavruyken iyileştirdiği kurt.
 
 [SAHNE 15: Kurt ağzında fenerle koşuyor, ağaçların arasında]
@@ -90,7 +110,9 @@ Boynunda yeşil bir şişe vardı. İçinde, şifacının hazırladığı ilaç.
 
 [SAHNE 16: Kulübenin önünde kurt, pencerede sıcak ışık]
 
-Kurt kulübeye önce vardı. Kapıyı burnuyla itti ve ilacı büyükannenin yatağının yanına bıraktı. Büyükanne gülümsedi. Ve tam o anda kapı açıldı.
+Kurt, kızı korkutmamak için geri çekildi ve kestirme yoldan koştu. Dikenler patilerini çizdi, fener sallandı ama sönmedi.
+
+Kurt kulübeye önce vardı. Kapıyı burnuyla itti ve ilacı büyükannenin yatağının yanına bıraktı. Büyükanne onu hemen tanıdı. Yıllar önce kapısının önünde bulup iyileştirdiği o küçük, yaralı yavru. Büyükanne gülümsedi. Ve tam o anda kapı açıldı.
 
 [SAHNE 17: Kapıda kız ve arkasında karanlık bir siluet]
 
@@ -122,4 +144,5 @@ Gizemli adamın kim olduğunu öğrenmek istiyorsan abone ol ve bildirimleri aç
 
 - Perrault, *Histoires ou contes du temps passé* (1697): avcı yok, kurt kızı yer, sonda manzum ahlak dersi.
 - Grimm Kardeşler, *Kinder- und Hausmärchen* (1812), "Rotkäppchen": avcı, kurdun karnına taş doldurulması.
+- Grimm, aynı masalın sonuna eklenen ikinci kısa hikâye (Hassenpflug kardeşlerden): kurt sosis suyu dolu taş yalakta boğulur ([Ashliman / Wikisource](https://en.wikisource.org/wiki/Grimm%27s_Household_Tales,_Volume_1/Little_Red-Cap)).
 - Fransız sözlü geleneği, "Conte de la mère-grand" (19. yy sonunda derlendi, Paul Delarue 1951'de yayımladı): kız ip hilesiyle kaçar. Asıl metindeki büyükannenin eti ve kanının ikram edilmesi sahnesi, ton gereği anlatıma alınmadı.
