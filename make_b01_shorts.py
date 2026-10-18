@@ -60,12 +60,17 @@ def text_block(text, font, maxw, fill, stroke=7):
     return img
 
 
+# Her sahnede dikey kadrajın ortalanacağı yatay nokta (0 = sol, 1 = sağ)
+FOCUS = {1: 0.32, 2: 0.5, 4: 0.62, 5: 0.7, 6: 0.5, 7: 0.5, 12: 0.55, 13: 0.45, 14: 0.55, 15: 0.5}
+
+
 def vertical(sc, k, u):
     im = L.IMGS[sc]
     iw, ih = im.size
     cw = ih * 9 / 16
     span = iw - cw
-    x0 = span * (0.25 + 0.5 * (u if k % 2 == 0 else 1 - u))
+    fx = FOCUS.get(sc, 0.5) + 0.06 * ((u if k % 2 == 0 else 1 - u) - 0.5)
+    x0 = min(max(fx * iw - cw / 2, 0), span)
     z = 1.0 + 0.06 * u
     ch2, cw2 = ih / z, cw / z
     box = (x0 + (cw - cw2) / 2, (ih - ch2) / 2, x0 + (cw + cw2) / 2, (ih + ch2) / 2)
@@ -84,7 +89,7 @@ def make(name, part, rng, top):
             segs[-1][1] = e
         else:
             segs.append([s, e, sc])
-        sents = [x.strip() for x in L.re.split(r"(?<=[.!?…])\s+", text) if x.strip()]
+        sents = [x.strip() for x in L.re.split(r'(?<=[.!?…])\s+|(?<=[.!?…]")\s+', text) if x.strip()]
         tot = sum(len(x) for x in sents)
         c = s
         for x in sents:
