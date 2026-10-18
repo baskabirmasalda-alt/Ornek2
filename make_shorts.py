@@ -64,7 +64,7 @@ def text_block(text, font, maxw, fill, stroke=7):
 
 # Her sahnede dikey kadrajın ortalanacağı yatay nokta (0 = sol, 1 = sağ)
 FOCUS = {
-    2: {6: 0.47, 7: 0.4, 12: 0.45, 13: 0.55, 15: 0.5},
+    2: {6: 0.47, 7: 0.3, 12: 0.45, 13: 0.55, 15: 0.5},
 }[L.BOLUM]
 
 
