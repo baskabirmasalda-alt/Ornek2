@@ -15,7 +15,7 @@ END = 2.5  # "Tamamı kanalda" kartı
 # (ad, parça no, satır aralığı [a, b), üst başlık)
 SHORTS = {
     2: [
-        ("1", 2, (4, 5), "Külkedisi'nin ayakkabısı\ngerçekten cam mıydı?"),
+        ("1", 2, (3, 5), "Külkedisi'nin ayakkabısı\ngerçekten cam mıydı?"),
         ("2", 3, (4, 6), "Grimm'in Külkedisi'nde\nayakkabı altındandı"),
         ("3", 4, (0, 2), "Külkedisi'nin bin yıllık\nÇinli hâli"),
     ],
@@ -64,7 +64,7 @@ def text_block(text, font, maxw, fill, stroke=7):
 
 # Her sahnede dikey kadrajın ortalanacağı yatay nokta (0 = sol, 1 = sağ)
 FOCUS = {
-    2: {},
+    2: {6: 0.47, 7: 0.4, 12: 0.45, 13: 0.55, 15: 0.5},
 }[L.BOLUM]
 
 
