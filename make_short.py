@@ -252,7 +252,7 @@ VIGNETTE = make_vignette()
 
 
 # ---------------------------------------------------------------- müzik
-def music():
+def music(melody=None, transpose=0):
     n = int(SR * DUR)
     t = np.arange(n) / SR
     out = np.zeros(n)
@@ -267,11 +267,11 @@ def music():
 
     hz = lambda m: 440 * 2 ** ((m - 69) / 12)
     # Müzik kutusu: La minör, gizemli masal havası
-    melody = [76, 72, 69, 72, 76, 79, 77, 76, 74, 71, 67, 71, 74, 77, 76, 74,
+    melody = melody or [76, 72, 69, 72, 76, 79, 77, 76, 74, 71, 67, 71, 74, 77, 76, 74,
               72, 69, 64, 69, 72, 76, 75, 76, 81, 79, 77, 76, 74, 72, 71, 69]
     beat = 0.3125  # 96 BPM sekizlik
     for k in range(int(DUR / beat)):
-        m = melody[k % len(melody)]
+        m = melody[k % len(melody)] + transpose
         if 15.2 < k * beat < 18.2:
             m -= 1  # gerilim sahnesinde detone
         note(hz(m), k * beat, vol=0.16 if k % 2 else 0.21)
@@ -315,21 +315,22 @@ def music():
         wf.writeframes(stereo.tobytes())
 
 
-def main():
-    music()
+def main(render_fn=None, out=OUT, **music_kw):
+    render_fn = render_fn or render
+    music(**music_kw)
     proc = subprocess.Popen(
         ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
          "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-i", "music.wav",
          "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
-         "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", OUT],
+         "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out],
         stdin=subprocess.PIPE)
     for i in range(N):
-        proc.stdin.write(render(i).tobytes())
+        proc.stdin.write(render_fn(i).tobytes())
         if i % 60 == 0:
             print(f"kare {i}/{N}")
     proc.stdin.close()
     proc.wait()
-    print("Bitti:", OUT)
+    print("Bitti:", out)
 
 
 if __name__ == "__main__":
