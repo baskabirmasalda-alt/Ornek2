@@ -24,6 +24,8 @@ Sence bu masalda kötü olan kimdi? Yorumlara yaz, en ilginç yorumu bir sonraki
 
 🔔 Masalların bilinmeyen yüzleri için abone ol ve bildirimleri aç.
 
+📖 Tarihî bilgiler masalların bilinen en eski yazılı kaynaklarına dayanır; "Başka bir masalda" bölümü ise kanalımızın özgün yorumudur. Masalların yüzlerce farklı anlatımı var; senin bildiğin farklı bir versiyon varsa yorumlarda paylaş, bir sonraki bölümde birlikte bakalım.
+
 Kaynaklar: Charles Perrault, Histoires ou contes du temps passé (1697); Jacob ve Wilhelm Grimm, Kinder- und Hausmärchen (1812); Fransız sözlü geleneği, "Büyükannenin Masalı".
 Görseller ve anlatım yapay zekâ araçlarıyla üretilmiş, senaryo özgün olarak yazılmıştır.
 

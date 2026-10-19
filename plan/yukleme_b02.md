@@ -25,6 +25,8 @@ Sence Külkedisi üvey kardeşlerini affetmeli miydi? Yorumlara yaz, en güzel y
 🔔 Masalların bilinmeyen yüzleri için abone ol ve bildirimleri aç.
 ▶ 1. bölüm: Kırmızı Başlıklı Kız'ın Bilinmeyen Gerçek Sonu
 
+📖 Tarihî bilgiler masalların bilinen en eski yazılı kaynaklarına dayanır; "Başka bir masalda" bölümü ise kanalımızın özgün yorumudur. Masalların yüzlerce farklı anlatımı var; senin bildiğin farklı bir versiyon varsa yorumlarda paylaş, bir sonraki bölümde birlikte bakalım.
+
 Kaynaklar: Charles Perrault, Histoires ou contes du temps passé (1697); Jacob ve Wilhelm Grimm, Kinder- und Hausmärchen (1812); Duan Chengshi, Youyang Zazu (~860); Strabon, Geographika 17.1.33.
 Görseller ve anlatım yapay zekâ araçlarıyla üretilmiş, senaryo özgün olarak yazılmıştır.
 

@@ -41,6 +41,8 @@ Her sahne komutunun başına eklenir:
 - Başlıkta bilinen masal adı + "gerçek / bilinmeyen / aslında" (YouTube aramasından geliyoruz).
 - vidIQ ile başlık puanlama ve anahtar kelime kontrolü yapılır.
 - Açıklamada bölüm zaman damgaları, kaynaklar ve yapay zekâ kullanım notu.
+- Kaynakların üstüne her bölümde aynı not: tarihî bilgiler en eski yazılı kaynaklara dayanır, "Başka bir masalda"
+  kanalın özgün yorumudur; izleyici bildiği farklı versiyonu yorumlarda paylaşmaya davet edilir.
 
 ## Shorts
 - Uzun videodan 3 parça, 20–35 sn; ilk cümle soru ya da şaşırtıcı bilgi.
