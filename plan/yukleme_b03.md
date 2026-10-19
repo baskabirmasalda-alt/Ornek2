@@ -49,7 +49,7 @@ pamuk prenses, pamuk prenses gerçek hikayesi, pamuk prenses masalı, kötü kra
 - Bitiş ekranı (son 20 sn): "Abone ol" + 2. bölüm
 - Yayın: 28 Ekim Salı 21:00 (Türkiye)
 
-## Shorts (29, 30 Ekim ve 1 Kasım, 15:00)
+## Shorts (29, 30 ve 31 Ekim, 15:00)
 
 | Dosya | Başlık | Açıklama ilk satırı |
 | --- | --- | --- |
