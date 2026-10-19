@@ -19,7 +19,7 @@ Kırmızı Başlıklı Kız'ın ilk hâlinde avcı yoktu. Külkedisi'nin ayakkab
 
 Başka Bir Masalda'da sevdiğimiz masalların gerçek kökenlerini, yüzyıllar içinde nasıl değiştiklerini ve unutulmuş versiyonlarını anlatıyoruz. Her bölümün sonunda da hiçbir kitapta olmayan, "ya öyle olmasaydı?" diye soran yepyeni bir hikâye var: Başka bir masalda...
 
-🕯️ Her Salı ve Cuma 21:00'de yeni masal
+🕯️ Her hafta yeni masallar, akşam 20:30'da prömiyerle
 📜 Grimm, Perrault ve dünyanın dört bir yanından masalların bilinmeyen hikâyeleri
 🎩 Ve her bölümde biraz daha yaklaşan gizemli şapkalı adam
 

@@ -41,7 +41,7 @@ Görseller ve anlatım yapay zekâ araçlarıyla üretilmiş, senaryo özgün ol
 - Kategori: Film ve Animasyon · Dil: Türkçe
 - Video 8 dakikadan uzun: **araya giren reklamları (mid-roll) aç**, otomatik yerleşim
 - Bitiş ekranı (son 20 sn): "Abone ol" + 1. bölüm
-- Yayın: Cuma 21:00 (Türkiye)
+- Yayın: 23 Ekim Perşembe 20:30 (Türkiye), prömiyer
 
 ## Shorts (her gün bir tane, 15:00)
 
