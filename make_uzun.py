@@ -33,7 +33,8 @@ if PARCALAR:
 KLIP = f"assets/{B}/klipler"  # sNN.mp4 varsa o sahne resim yerine animasyon klibiyle oynar
 # Sahne başına parçacık efekti: toz (varsayılan), kar, yaprak, yok
 EFEKT = {
-    3: {1: "toz", 2: "toz", 3: "yaprak", 4: "kar"},
+    3: {3: "yaprak", 4: "kar", 5: "kar", 8: "yaprak", 10: "yaprak", 11: "yaprak", 12: "yaprak", 13: "yaprak",
+        15: "yok", 18: "yaprak"},
 }.get(BOLUM, {})
 
 

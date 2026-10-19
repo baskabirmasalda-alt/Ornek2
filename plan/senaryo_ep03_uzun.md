@@ -36,9 +36,13 @@ Yıl 1812. Grimm Kardeşler, Alman masallarını topladıkları ilk kitabı yay�
 
 Masal tanıdık başlıyor. Bir kış günü kraliçe pencerenin önünde nakış işlerken bir çocuk diliyor: Kar kadar beyaz, abanoz kadar siyah saçlı ve gül kadar kırmızı yanaklı bir kız.
 
+Bu dileğin bir de küçük ayrıntısı var: Kraliçe nakış işlerken iğne parmağına batıyor ve karın üzerine üç damla kırmızı düşüyor. Beyaz kar, kırmızı damla ve pencerenin abanoz çerçevesi. Kızın bütün görünüşü, o tek bir kış anından doğuyor.
+
 [SAHNE 6: Kraliçe bebeği kucağında tutuyor, yanında saray odası, sıcak ışık]
 
 Dileği gerçek oluyor. Ama 1812 baskısında dikkat çeken bir ayrıntı var: Bu kraliçe ölmüyor. Kızı büyüdükçe aynasına soruyor. Ve bir gün ayna, ülkenin en güzelinin artık kendisi değil, kendi kızı olduğunu söylüyor.
+
+Aynaya sorulan o meşhur soru da Almancada kafiyeli bir tekerleme: "Aynacık, aynacık, duvardaki; ülkenin en güzeli kim?" Ayna her sabah aynı cevabı veriyor: "Kraliçem, en güzel sizsiniz." Ta ki Pamuk Prenses yedi yaşına gelene kadar.
 
 [SAHNE 7: Eski bir kitap sayfası, iki farklı baskı yan yana, bir kalem bir kelimenin üstünü çiziyor]
 
@@ -54,6 +58,8 @@ Kraliçe bir avcıya Pamuk Prenses'i ormana götürmesini ve bir daha geri dönm
 
 Pamuk Prenses ormanın derinliklerinde yedi cücenin evini buluyor. Grimm'in masalında bu cücelerin adı yok. Uykucu, Huysuz, Neşeli gibi isimler, yüz yıl sonra sahneye ve sinemaya taşınan uyarlamalarla doğdu.
 
+Masaldaki ev de çok tatlı bir ayrıntıyla anlatılıyor. Masada yedi küçük tabak, yedi küçük kaşık ve yedi küçük bardak var. Pamuk Prenses çok aç ama kimsenin payını almak istemiyor. Bu yüzden her tabaktan biraz sebze, her bardaktan bir yudum içiyor. Sonra yedi yatağı tek tek deniyor ve ancak yedincisi ona uyuyor.
+
 [SAHNE 10: Kılık değiştirmiş yaşlı satıcı kadın, kulübenin penceresinde renkli kurdeleler uzatıyor]
 
 Kraliçe de pes etmiyor. Masalda Pamuk Prenses'e üç kez ulaşıyor: Önce yaşlı bir satıcı kılığında renkli bir korse bağcığıyla, sonra süslü bir tarakla ve en sonunda elmayla. Her seferinde cüceler eve dönüp onu kurtarıyor. Ama elmaya bir çare bulamıyorlar.
@@ -61,6 +67,8 @@ Kraliçe de pes etmiyor. Masalda Pamuk Prenses'e üç kez ulaşıyor: Önce yaş
 [SAHNE 11: Ormanda cam tabut, yedi cüce ve prens, hafif bir rüzgâr]
 
 Cüceler Pamuk Prenses'i cam bir tabuta yatırıp bir tepenin üstüne koyuyor. Bir gün oradan bir prens geçiyor ve tabutu yanında götürmek istiyor.
+
+Cüceler önce dünyadaki bütün altınlara bile onu vermeyeceklerini söylüyor. Ama prens, Pamuk Prenses'i görmeden yaşayamayacağını, ona hep değer vereceğini söyleyince cücelerin yüreği yumuşuyor ve tabutu ona veriyorlar.
 
 [SAHNE 12: Prensin uşakları tabutu taşırken bir uşak bir ağaç köküne takılıp tökezliyor]
 
@@ -70,15 +78,17 @@ Ve işte en bilinmeyen kısım. Grimm'in son baskısında onu uyandıran bir öp
 
 [SAHNE 13: 18. yüzyıl Alman şatosu, bir kalenin içinde büyük, süslü bir ayna]
 
-Peki bu masalın arkasında gerçek bir hikâye var mı? Almanya'da konuşulan ilginç bir teori var. 1980'lerde yerel tarihçi Karlheinz Bartels, Lohr adlı küçük bir kasabada yaşamış Maria Sophia von Erthal adında bir soylu kızın masala ilham vermiş olabileceğini öne sürdü.
+Peki bu masalın arkasında gerçek bir hikâye var mı? Almanya'da konuşulan ilginç bir teori var. 1986'da yerel bir eczacı ve masal araştırmacısı olan Karlheinz Bartels, Lohr adlı küçük bir kasabada yaşamış Maria Sophia von Erthal adında bir soylu kızın masala ilham vermiş olabileceğini öne sürdü.
 
 [SAHNE 14: Lohr şatosundaki müzede sergilenen büyük, eski bir ayna]
 
-Bu teoriye göre Maria Sophia'nın babası ikinci kez evlenmişti ve üvey annesine hediye edilen büyük bir ayna bugün hâlâ Lohr şatosundaki müzede duruyor. O bölgenin cam atölyelerinde üretilen bazı aynalar, üzerlerine yazılan özlü sözler yüzünden "konuşan aynalar" diye anılıyordu.
+Bu teoriye göre Maria Sophia'nın babası ikinci kez evlenmişti ve üvey annesine hediye edilen büyük bir ayna bugün hâlâ Lohr şatosundaki müzede duruyor. Bu ayna, Lohr'daki ayna atölyesinde yapılmış ve üzerinde Fransızca "amour propre", yani "kendini sevme" yazıyor. O atölyede üretilen bazı aynalar, üzerlerine yazılan bu tür özlü sözler yüzünden "konuşan aynalar" diye anılıyordu.
 
 [SAHNE 15: Ormanın içinde eski maden girişi, fenerler, kısa boylu madenciler]
 
 Teoriyi destekleyenler, yakındaki dağlarda çalışan ve dar tünellere sığmak için küçük yapılı olması gereken madencileri de cücelere benzetiyor. Ama bu bir kanıt değil, bir teori. Masallar yüzyıllar boyunca dilden dile dolaştı ve tek bir gerçek kişiye dayanmaları pek olası değil.
+
+Bu arada Lohr bu teoriyi çok sevmiş. Bugün kasaba kendine "Pamuk Prenses Şehri" diyor, müzede ayrı bir Pamuk Prenses odası var ve bahar ile yaz aylarında ziyaretçileri Pamuk Prenses kılığındaki bir rehberin karşıladığı şehir turları düzenleniyor. Yani masal, belki gerçek bir kızdan doğmadı ama gerçek bir kasabayı değiştirdi.
 
 ### 6:15 – Başka bir masalda
 
@@ -89,6 +99,8 @@ Peki ya hep yanlış kişiyi suçladıysak? Başka bir masalda, kraliçe kötü 
 [SAHNE 17: Aynanın içinde kraliçenin daha yaşlı bir yansıması, gerçek kraliçe şaşkın]
 
 Ayna ona her gün aynı şeyi söylüyordu: "Artık eskisi kadar güzel değilsin. Herkes kızına bakıyor." Kraliçe aynaya inandıkça içindeki kıskançlık büyüdü.
+
+Kızı ona bahçeden topladığı çiçekleri getirdiğinde kraliçe gülümseyemiyordu. Çünkü aklında hep aynanın sesi vardı. Ve ayna ne kadar konuşursa, saraydaki herkes o kadar sessizleşiyordu.
 
 [SAHNE 18: Kraliçe aynanın önünden kalkıp pencereden bahçede gülen Pamuk Prenses'e bakıyor]
 
@@ -119,6 +131,6 @@ Sence kraliçe kötü müydü, yoksa sadece kıskanç mı? Yorumlara yaz, en gü
 - Grimm Kardeşler, *Kinder- und Hausmärchen* (1812), "Sneewittchen": kötü kraliçe öz annedir; 1819 baskısında üvey anneye çevrildi (1810 el yazmasında da öz anne). Değişikliğin çocuklara uygunluk eleştirileriyle ilgili olduğu düşünülür; Hansel ile Gretel'de de benzer değişiklik yapıldı.
 - Korse bağcığı, tarak ve elma ile üç girişim; cam tabut. Grimm'in sonraki baskılarında (1857) uşaklar tabutu taşırken tökezler, elma parçası boğazdan çıkar; öpücük yoktur. (1812 metninde uyanma sahnesi farklı anlatılır.)
 - Grimm'de cücelerin adı yoktur; bilinen isimler 20. yüzyıl sahne ve sinema uyarlamalarından gelir.
-- Lohr teorisi: Karlheinz Bartels (1986), Maria Sophia von Erthal; Lohr şatosundaki Spessart Müzesi'nde sergilenen ayna. Bağımsız akademik doğrulaması yoktur, teori olarak anlatıldı. Margaretha von Waldeck teorisi anlatılmadı.
+- Lohr teorisi: eczacı Karlheinz Bartels (1986), Maria Sophia von Erthal; Lohr şatosundaki Spessart Müzesi'nde sergilenen, "amour propre" yazılı ayna; kasaba kendini "Schneewittchenstadt" olarak tanıtır. Bağımsız akademik doğrulaması yoktur, teori olarak anlatıldı. Margaretha von Waldeck teorisi anlatılmadı.
 - Grimm'deki son ceza sahnesi ton kuralı gereği anlatılmadı.
 - "Başka bir masalda" bölümü ve şapkalı adam kanalın özgün kurgusudur.
