@@ -89,16 +89,16 @@ Görseller ve anlatım yapay zekâ araçlarıyla üretilmiş, senaryo özgün ol
 
 **Studio → Özelleştirme → Marka:**
 - **Video filigranı:** küçük kanal logosu, "Videonun sonunda" değil "**Videonun tamamında**". İzleyici filigrana tıklayınca abone olabiliyor.
-- Profil resmi ve banner: hazırlayabilirim, istersen söyle.
+- Profil resmi: `assets/marka/logo.png` · Banner: `assets/marka/banner.jpg` · Filigran: `assets/marka/filigran.png` (`make_marka.py` ile üretildi, yüklendi).
 
 ## 4. Yayın takvimi
 
 | Gün | Saat | İçerik |
 | --- | --- | --- |
-| Salı | 21:00 | Uzun bölüm (8–9 dk, araya giren reklamlar açık) |
-| Cuma | 21:00 | Uzun bölüm (8–9 dk, araya giren reklamlar açık) |
+| Salı | 20:30 | Uzun bölüm (8–9 dk, araya giren reklamlar açık) |
+| Cuma | 20:30 | Uzun bölüm (8–9 dk, araya giren reklamlar açık) |
 | Diğer günler | 15:00 | 1 Shorts (uzun videodan kesit, sonunda "Tamamı kanalda") |
-| Ayda 1 Pazar | 21:00 | İleride: 30–60 dk derleme ("Uyumadan Önce Dinle") |
+| Ayda 1 Pazar | 20:30 | İleride: 30–60 dk derleme ("Uyumadan Önce Dinle") |
 
 ## 5. Abonelikler
 
