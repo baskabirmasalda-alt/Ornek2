@@ -27,6 +27,9 @@ Her sahne komutunun başına eklenir:
 - Gizemli sahnelerde: "warm dusk light, long soft shadows" (karanlık değil, akşam ışığı).
 - Her bölümde önce **karakter referans sayfası** üretilir ve tüm sahnelere referans olarak bağlanır.
 - Model: `gemini-3.1-flash-image` (referanslı ~609 kredi/görsel).
+- Gemini, ünlü film sahnelerine çok benzeyen kareleri (ör. balkabağı araba, gece yarısı merdiveni) güvenlik
+  filtresine takabilir. Engellenen sahneler `bytedance-seedream-4.5` ile üretilir (~242 kredi, 16:9 2K;
+  1376x768'e küçültülür). Karakter referans sayfasında yaş etiketi kullanılmaz.
 - Örnek: `assets/stil_test/e_sicak_yagliboya.png`, `assets/b02/ornek_sahne_e.png`.
 
 ## Kapak (1280x720)
