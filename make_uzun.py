@@ -26,6 +26,15 @@ FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 INTRO, GAP, OUTRO = 1.0, 0.6, 4.0  # saniye
 XF = 0.8  # sahne geçişi
 GROUPS = [[0, 1], [2], [3], [4], [5], [6]]  # hangi ### bölümleri hangi anlatım parçasında
+# PARCALAR=1 gibi verilirse yalnızca o anlatım parçaları işlenir (deneme çıktısı)
+PARCALAR = [int(x) for x in os.environ.get("PARCALAR", "").split(",") if x]
+if PARCALAR:
+    OUT = OUT.replace("_uzun.mp4", "_deneme.mp4")
+KLIP = f"assets/{B}/klipler"  # sNN.mp4 varsa o sahne resim yerine animasyon klibiyle oynar
+# Sahne başına parçacık efekti: toz (varsayılan), kar, yaprak, yok
+EFEKT = {
+    3: {1: "toz", 2: "toz", 3: "yaprak", 4: "kar"},
+}.get(BOLUM, {})
 
 
 def part_lines():
@@ -55,9 +64,11 @@ def duration(path):
 def build_timeline():
     """Sahne aralıkları ve alt yazı aralıkları (saniye)."""
     lines = part_lines()
+    parts = [p - 1 for p in PARCALAR] or range(len(lines))
     t = INTRO
     scenes, subs, starts = [], [], []
-    for p, pl in enumerate(lines):
+    for p in parts:
+        pl = lines[p]
         d = duration(f"{SES}/p{p + 1}.mp3")
         starts.append(t)
         total = sum(len(l) for l, _ in pl)
@@ -90,8 +101,14 @@ SCENES, SUBS, STARTS, TOTAL = build_timeline()
 N = int(TOTAL * FPS)
 
 # ------------------------------------------------------------ görseller
-IMGS = {}
+IMGS, CLIPS = {}, {}
 for _, _, sc in SCENES:
+    kp = f"{KLIP}/s{sc:02d}.mp4"
+    if sc not in CLIPS and os.path.exists(kp):
+        raw = subprocess.check_output(["ffmpeg", "-loglevel", "error", "-i", kp, "-vf",
+                                       f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}",
+                                       "-r", str(FPS), "-f", "rawvideo", "-pix_fmt", "rgb24", "-"])
+        CLIPS[sc] = np.frombuffer(raw, np.uint8).reshape(-1, H, W, 3)
     if sc not in IMGS:
         im = Image.open(f"{SAHNE}/s{sc:02d}.png").convert("RGB")
         w, h = im.size
@@ -117,6 +134,60 @@ def kenburns(sc, k, u):
     cy = ih / 2 + dx[1] * (bh - ch) / 2 * (u - 0.5) * 1.6
     box = (cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2)
     return im.resize((W, H), Image.BILINEAR, box=box)
+
+
+def clip_frame(sc, u, dur):
+    """Klibi ileri-geri (ping-pong) oynatır, üstüne hafif yakınlaşma ekler."""
+    fr = CLIPS[sc]
+    n = len(fr)
+    i = int(u * dur * FPS) % (2 * n - 2) if n > 1 else 0
+    i = i if i < n else 2 * n - 2 - i
+    im = Image.fromarray(fr[i])
+    z = 1.0 + 0.04 * u
+    cw, ch = W / z, H / z
+    return im.resize((W, H), Image.BILINEAR, box=((W - cw) / 2, (H - ch) / 2, (W + cw) / 2, (H + ch) / 2))
+
+
+def scene_frame(sc, k, u, dur):
+    return clip_frame(sc, u, dur) if sc in CLIPS else kenburns(sc, k, u)
+
+
+def _sprite(r, color):
+    yy, xx = np.mgrid[-r:r + 1, -r:r + 1]
+    a = np.clip(1 - np.sqrt(xx ** 2 + yy ** 2) / r, 0, 1) ** 2
+    arr = np.zeros((2 * r + 1, 2 * r + 1, 4), np.uint8)
+    arr[..., :3] = color
+    arr[..., 3] = (a * 255).astype(np.uint8)
+    return Image.fromarray(arr, "RGBA")
+
+
+SPRITES = {"toz": [_sprite(r, (255, 226, 160)) for r in (3, 5, 8)],
+           "kar": [_sprite(r, (255, 255, 255)) for r in (4, 6, 9)],
+           "yaprak": [_sprite(r, (255, 170, 190)) for r in (5, 7, 10)]}
+_rng = np.random.default_rng(7)
+PARTICLES = _rng.random((70, 6))  # x, y, boyut, hız, faz, parlaklık
+
+
+def particles(f, kind, t):
+    """Yavaşça süzülen parçacıklar; tür sahneye göre değişir."""
+    if kind == "yok":
+        return
+    fall = {"toz": -12, "kar": 55, "yaprak": 40}[kind]
+    for x, y, sz, sp, ph, br in PARTICLES:
+        px = (x * W + 30 * np.sin(t * 0.5 + ph * 6.28) + (20 if kind == "yaprak" else 4) * t * (sp - 0.3)) % W
+        py = (y * H + fall * t * (0.5 + sp)) % H
+        spr = SPRITES[kind][int(sz * 3) % 3]
+        if kind == "toz":
+            a = 0.35 + 0.35 * np.sin(t * (1 + sp) + ph * 6.28)
+            spr = spr.copy()
+            spr.putalpha(spr.getchannel("A").point(lambda v, a=a * br: int(v * a)))
+        f.alpha_composite(spr, (int(px), int(py)))
+
+
+def flicker(f, t):
+    """Mum ışığı gibi hafif sıcak titreşim."""
+    a = int(10 + 8 * np.sin(t * 7.3) * np.sin(t * 2.1 + 1))
+    f.alpha_composite(Image.new("RGBA", (W, H), (255, 170, 60, max(0, a))))
 
 
 def make_vignette():
@@ -177,12 +248,15 @@ def render(i):
     t = i / FPS
     k = next(j for j, (s, e, _) in enumerate(SCENES) if s <= t < e or j == len(SCENES) - 1)
     s, e, sc = SCENES[k]
-    f = kenburns(sc, k, (t - s) / (e - s))
+    f = scene_frame(sc, k, (t - s) / (e - s), e - s)
     if k > 0 and t < s + XF:
         ps, pe, psc = SCENES[k - 1]
-        prev = kenburns(psc, k - 1, min(1.0, (t - ps) / (pe - ps)))
+        prev = scene_frame(psc, k - 1, min(1.0, (t - ps) / (pe - ps)), pe - ps)
         f = Image.blend(prev, f, smooth((t - s) / XF))
     f = f.convert("RGBA")
+    if EFEKT:
+        flicker(f, t)
+        particles(f, EFEKT.get(sc, "toz"), t)
     f.alpha_composite(VIGNETTE)
     for a, b, text in SUBS:
         if a <= t < b:
@@ -240,8 +314,9 @@ def ambient(total):
 
 def voice_track():
     inputs, filt = [], []
-    for p, st in enumerate(STARTS):
-        inputs += ["-i", f"{SES}/p{p + 1}.mp3"]
+    ids = PARCALAR or range(1, len(STARTS) + 1)
+    for p, (st, pid) in enumerate(zip(STARTS, ids)):
+        inputs += ["-i", f"{SES}/p{pid}.mp3"]
         ms = int(st * 1000)
         filt.append(f"[{p}:a]aresample={SR},adelay={ms}|{ms}[v{p}]")
     mix = "".join(f"[v{p}]" for p in range(len(STARTS)))
