@@ -19,13 +19,20 @@ RENK = {  # dikey degrade: üst, alt
 }
 
 
-def arka_plan(path, odak):
+def arka_plan(path, odak, kaydir=0.0):
     im = Image.open(path).convert("RGB")
     w, h = im.size
     cw = w / 1.08  # hafif yakınlaştır, odak noktası sağda kalsın
     ch = cw * 9 / 16
     x0 = min(max(odak * w - cw / 2, 0), w - cw)
     im = im.crop((int(x0), int((h - ch) / 2), int(x0 + cw), int((h + ch) / 2))).resize((W, H), Image.LANCZOS)
+    if kaydir > 0:  # görseli sağa it, soldaki boşluğu bulanık ve aynalanmış kenarla doldur
+        dx = int(W * kaydir)
+        sol = im.crop((0, 0, dx, H)).transpose(Image.FLIP_LEFT_RIGHT).filter(ImageFilter.GaussianBlur(12))
+        yeni = Image.new("RGB", (W, H))
+        yeni.paste(im, (dx, 0))
+        yeni.paste(sol, (0, 0))
+        im = yeni
     im = ImageEnhance.Color(im).enhance(1.3)
     im = ImageEnhance.Contrast(im).enhance(1.12)
     c = im.convert("RGBA")
@@ -97,16 +104,18 @@ def main():
     ap.add_argument("--etiket", default="Bilinmeyen Gerçek Hikâye")
     ap.add_argument("--odak", type=float, default=0.55, help="arka planda yatay odak (0 sol, 1 sağ)")
     ap.add_argument("--aci", type=float, default=3.0, help="yazı bloğunun eğimi (derece)")
+    ap.add_argument("--kaydir", type=float, default=0.0, help="arka planı sağa kaydırma oranı (0-0.3)")
+    ap.add_argument("--genislik", type=float, default=0.64, help="yazının kaplayabileceği en fazla genişlik oranı")
     a = ap.parse_args()
 
-    c = arka_plan(a.arka, a.odak)
+    c = arka_plan(a.arka, a.odak, a.kaydir)
     satirlar = [[tuple(p.split("|")) for p in s.split(";")] for s in a.satirlar]
     # en uzun satır sol %60'a sığacak şekilde yazı boyutu
-    boy = 150
+    boy = 170
     while boy > 60:
         f = ImageFont.truetype(FONT, boy)
         tmp = ImageDraw.Draw(Image.new("L", (1, 1)))
-        if max(sum(tmp.textlength(m, font=f) for m, _ in s) for s in satirlar) < W * 0.64:
+        if max(sum(tmp.textlength(m, font=f) for m, _ in s) for s in satirlar) < W * a.genislik:
             break
         boy -= 4
     f = ImageFont.truetype(FONT, boy)

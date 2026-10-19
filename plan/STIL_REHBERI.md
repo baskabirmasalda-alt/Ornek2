@@ -32,10 +32,14 @@ Her sahne komutunun başına eklenir:
   1376x768'e küçültülür). Karakter referans sayfasında yaş etiketi kullanılmaz.
 - Örnek: `assets/stil_test/e_sicak_yagliboya.png`, `assets/b02/ornek_sahne_e.png`.
 
-## Kapak (1280x720)
-- En fazla 2–3 kelimelik büyük yazı: beyaz + sarı (255,205,70), kalın siyah kontur; altında kırmızı etiket.
-- Yazı solda, ana karakterin yüzü yazının altında kalmaz.
-- Merak boşluğu: "CAM DEĞİLDİ!", "AVCI YOKTU!" gibi şaşırtıcı ama zararsız bilgi.
+## Kapak (1280x720) – `make_kapak.py`
+- Kanalın örnek aldığı tarz: kalın Inter Display Black yazı, beyaz / altın degrade / kırmızı renkler, kalın siyah
+  kontur ve 3B gölge, hafif eğik blok; altında kırmızı fırça darbesi etiketi.
+- Arka plan için ayrı görsel üretilir: karakterler sağ %55'te, sol %45 boş ve bulanık ("thumbnail background",
+  doygun renkler, güçlü kontur ışığı). Gerekirse `--kaydir` ile sağa itilir.
+- Yazı 2–3 kısa satır; ana karakterin yüzü yazının altında kalmaz.
+- Merak boşluğu: "CAMDAN DEĞİLDİ!", "ÖZ ANNESİYDİ!" gibi şaşırtıcı ama zararsız bilgi.
+- Örnek: `python3 make_kapak.py arka.jpg kapak.jpg "KÖTÜ KRALİÇE|altin" "ÖZ |beyaz;ANNESİYDİ!|kirmizi" --etiket "Pamuk Prenses'in Gerçek Hikâyesi" --kaydir 0.16 --genislik 0.52`
 
 ## Başlık ve açıklama
 - Başlıkta bilinen masal adı + "gerçek / bilinmeyen / aslında" (YouTube aramasından geliyoruz).
