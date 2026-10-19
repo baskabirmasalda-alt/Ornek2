@@ -47,9 +47,9 @@ pamuk prenses, pamuk prenses gerçek hikayesi, pamuk prenses masalı, kötü kra
 - Kategori: Film ve Animasyon · Dil: Türkçe
 - Araya giren reklamlar (mid-roll): **Açık**, otomatik yerleşim
 - Bitiş ekranı (son 20 sn): "Abone ol" + 2. bölüm
-- Yayın önerisi: 31 Ekim Cuma 21:00 (Türkiye)
+- Yayın: 28 Ekim Salı 21:00 (Türkiye)
 
-## Shorts (her gün bir tane, 15:00)
+## Shorts (29, 30 Ekim ve 1 Kasım, 15:00)
 
 | Dosya | Başlık | Açıklama ilk satırı |
 | --- | --- | --- |
