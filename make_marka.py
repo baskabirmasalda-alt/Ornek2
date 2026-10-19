@@ -61,7 +61,7 @@ def banner(src):
 def logo(src):
     im = Image.open(src).convert("RGB")
     w, h = im.size
-    s = min(w, h)
+    s = int(min(w, h) * 0.84)  # madalyonun altın çerçevesi daireye tam otursun
     im = im.crop(((w - s) // 2, (h - s) // 2, (w + s) // 2, (h + s) // 2)).resize((800, 800), Image.LANCZOS)
     im = ImageEnhance.Contrast(ImageEnhance.Color(im).enhance(1.15)).enhance(1.08)
     os.makedirs(OUT, exist_ok=True)
