@@ -19,6 +19,11 @@ SHORTS = {
         ("2", 3, (4, 6), "Grimm'in Külkedisi'nde\nayakkabı altındandı"),
         ("3", 4, (0, 2), "Külkedisi'nin bin yıllık\nÇinli hâli"),
     ],
+    3: [
+        ("1", 1, (0, 2), "Kötü kraliçe\naslında kimdi?"),
+        ("2", 3, (6, 7), "Pamuk Prenses'i\nöpücük uyandırmadı"),
+        ("3", 4, (1, 2), "Gerçek bir \"sihirli ayna\"\nvar mı?"),
+    ],
 }[L.BOLUM]
 
 
@@ -65,6 +70,7 @@ def text_block(text, font, maxw, fill, stroke=7):
 # Her sahnede dikey kadrajın ortalanacağı yatay nokta (0 = sol, 1 = sağ)
 FOCUS = {
     2: {6: 0.47, 7: 0.3, 12: 0.45, 13: 0.55, 15: 0.5},
+    3: {1: 0.5, 2: 0.62, 12: 0.42, 14: 0.5},
 }[L.BOLUM]
 
 
