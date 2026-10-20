@@ -24,6 +24,11 @@ SHORTS = {
         ("2", 3, (6, 7), "Pamuk Prenses'i\nöpücük uyandırmadı"),
         ("3", 4, (1, 2), "Gerçek bir \"sihirli ayna\"\nvar mı?"),
     ],
+    4: [
+        ("1", 1, (0, 2), "Alaaddin'i aslında\nkim anlattı?"),
+        ("2", 2, (3, 5), "Alaaddin'de üç dilek\nhakkı yoktu!"),
+        ("3", 2, (1, 3), "Alaaddin'in masalında\naslında iki cin var"),
+    ],
 }[L.BOLUM]
 
 
@@ -71,6 +76,7 @@ def text_block(text, font, maxw, fill, stroke=7):
 FOCUS = {
     2: {6: 0.47, 7: 0.3, 12: 0.45, 13: 0.55, 15: 0.5},
     3: {1: 0.5, 2: 0.62, 12: 0.42, 14: 0.5},
+    4: {5: 0.33, 6: 0.45, 9: 0.4, 10: 0.42, 11: 0.5},
 }[L.BOLUM]
 
 

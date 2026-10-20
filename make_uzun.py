@@ -35,6 +35,7 @@ KLIP = f"assets/{B}/klipler"  # sNN.mp4 varsa o sahne resim yerine animasyon kli
 EFEKT = {
     3: {3: "yaprak", 4: "kar", 5: "kar", 8: "yaprak", 10: "yaprak", 11: "yaprak", 12: "yaprak", 13: "yaprak",
         15: "yok", 18: "yaprak"},
+    4: {21: "yok"},
 }.get(BOLUM, {})
 
 
