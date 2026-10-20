@@ -26,8 +26,8 @@ SHORTS = {
     ],
     4: [
         ("1", 1, (0, 2), "Alaaddin'i aslında\nkim anlattı?"),
-        ("2", 2, (3, 5), "Alaaddin'de üç dilek\nhakkı yoktu!"),
-        ("3", 2, (1, 3), "Alaaddin'in masalında\naslında iki cin var"),
+        ("2", 3, (3, 5), "Alaaddin'de üç dilek\nhakkı yoktu!"),
+        ("3", 3, (1, 3), "Alaaddin'in masalında\naslında iki cin var"),
     ],
 }[L.BOLUM]
 
