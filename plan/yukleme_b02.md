@@ -43,7 +43,7 @@ Görseller ve anlatım yapay zekâ araçlarıyla üretilmiş, senaryo özgün ol
 - Bitiş ekranı (son 20 sn): "Abone ol" + 1. bölüm
 - Yayın: 23 Ekim Perşembe 20:30 (Türkiye), prömiyer
 
-## Shorts (her gün bir tane, 15:00)
+## Shorts (24, 25 ve 26 Ekim, 15:00)
 
 | Dosya | Başlık | Açıklama ilk satırı |
 | --- | --- | --- |
@@ -52,3 +52,30 @@ Görseller ve anlatım yapay zekâ araçlarıyla üretilmiş, senaryo özgün ol
 | `baska_bir_masalda_b02_short_3.mp4` | Külkedisi'nin Bin Yıllık Çinli Hâli 🏮 #shorts | Peri anne yerine sihirli bir balık. Tamamı kanalda. |
 
 Her Shorts'ta "İlgili video" olarak uzun videoyu seç.
+
+### Kopyala-yapıştır açıklamalar
+
+**Short 1**
+```
+Külkedisi'nin ayakkabısı gerçekten cam mıydı? 300 yıldır süren bir "yazım hatası" tartışması var. 👠
+Tamamı kanalda ▶ Başka Bir Masalda
+
+#shorts #külkedisi #masal #masallarıngerçekyüzü #başkabirmasalda
+```
+
+**Short 2**
+```
+Grimm Kardeşler'in Külkedisi'nde ne peri anne var ne de cam ayakkabı. Ayakkabı altından, yardım eden de güvercinler. ✨
+Tamamı kanalda ▶ Başka Bir Masalda
+
+#shorts #külkedisi #grimmmasalları #masal #başkabirmasalda
+```
+
+**Short 3**
+```
+Külkedisi'nin bilinen en eski hâllerinden biri bin yıl önce Çin'de yazıldı. Orada peri anne yerine sihirli bir balık var. 🏮
+Tamamı kanalda ▶ Başka Bir Masalda
+
+#shorts #külkedisi #masal #masallarıngerçekyüzü #başkabirmasalda
+```
+
