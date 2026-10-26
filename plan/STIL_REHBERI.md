@@ -49,8 +49,11 @@ Her sahne komutunun başına eklenir:
   kanalın özgün yorumudur; izleyici bildiği farklı versiyonu yorumlarda paylaşmaya davet edilir.
 
 ## Shorts
-- Uzun videodan 3 parça, 20–35 sn; ilk cümle soru ya da şaşırtıcı bilgi.
-- Sonda "Tamamı kanalda ▶" kartı; "İlgili video" olarak uzun video seçilir.
+- Her bölümden 3 Shorts, **en fazla 25 sn** (kanal verisi: 20 sn'lik Shorts %76, 43 sn'lik %35 izlendi).
+- Shorts metni uzun videodan kesilmez, ayrı yazılıp seslendirilir (`make_shorts.py` → `METIN`, ses
+  `assets/bNN/ses/short_N.mp3`, ~50 kelime): **ilk cümle soru** ("... aslında kimdi?"), ortada tek
+  şaşırtıcı bilgi, **son cümle ilk soruya döner** (başa sarınca kopmasın).
+- Sonda "Tamamı kanalda ▶" kartı; yayından önce "İlgili video" olarak uzun video seçilir (en önemli adım).
 
 ## Ses
 - Anlatıcı: Fatih Çetinkaya (ElevenLabs, `DM4ogDUNaqwcuIIRkVZK`), model eleven_v4.

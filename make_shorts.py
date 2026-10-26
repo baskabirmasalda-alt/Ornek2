@@ -72,11 +72,51 @@ def text_block(text, font, maxw, fill, stroke=7):
     return img
 
 
+# Shorts için ayrı yazılmış kısa metinler (3. bölümden itibaren): ilk cümle soru şeklinde kanca, son cümle
+# başa bağlanır. Ses: assets/bNN/ses/short_N.mp3. Biçim: ad -> (üst başlık, [(sahne, alt yazı metni), ...])
+METIN = {
+    3: {
+        "1": ("Kötü kraliçe\naslında kimdi?", [
+            (2, "Pamuk Prenses'in kötü kraliçesi aslında kimdi? İlk baskıdaki cevap çok şaşırtıcı."),
+            (6, "1812'de Grimm Kardeşler'in yazdığı masalda kraliçe, üvey anne değil, Pamuk Prenses'in öz annesiydi."),
+            (7, "Yedi yıl sonra bu fazla ağır bulundu ve masala üvey anne eklendi. Peki o zaman, kötü kraliçe "
+                "aslında kimdi?")]),
+        "2": ("Pamuk Prenses'i\nöpücük uyandırmadı", [
+            (11, "Pamuk Prenses'i bir öpücük uyandırmadı. Peki ne uyandırdı?"),
+            (12, "Grimm'in masalında prensin uşakları cam tabutu taşırken biri bir ağaç köküne takılıp tökezliyor. "
+                 "Sarsıntıyla elma parçası boğazından çıkıyor ve Pamuk Prenses gözlerini açıyor. Yani onu kurtaran "
+                 "bir öpücük değil, sakar bir uşaktı.")]),
+        "3": ("Gerçek bir \"sihirli ayna\"\nvar mı?", [
+            (14, "Gerçek bir sihirli ayna var mı? Almanya'da bir kasaba, var diyor."),
+            (13, "Lohr kasabasındaki şatoda, üzerinde Fransızca \"kendini sevme\" yazan yüzlerce yıllık bir ayna duruyor."),
+            (14, "Bazı araştırmacılara göre Pamuk Prenses'in aynası buydu. Bu bir teori, ama kasaba kendine artık "
+                 "Pamuk Prenses Şehri diyor. Sence gerçek bir sihirli ayna var mı?")]),
+    },
+    4: {
+        "1": ("Alaaddin'i aslında\nkim anlattı?", [
+            (5, "Alaaddin'i aslında kim anlattı? Cevap: Halepli, yirmi yaşında bir genç."),
+            (2, "1709'da Hanna Diyab, Paris'te Fransız yazar Galland'a masallar anlattı. Alaaddin de bunlardan biriydi."),
+            (7, "Ama kitap basıldığında Hanna'nın adı yoktu. Masalın gerçek anlatıcısı neredeyse üç yüz yıl unutuldu. "
+                "Peki Alaaddin'i aslında kim anlattı?")]),
+        "2": ("Alaaddin'de üç dilek\nhakkı yoktu!", [
+            (11, "Alaaddin'in cini üç dilek hakkı veriyor, değil mi? Aslında hayır. Orijinal masalda böyle bir kural "
+                 "yok. Lamba kimin elindeyse cin onun her isteğini yerine getiriyor."),
+            (12, "Bir gecede saray bile yapıyor. Üç dilek fikri, sonraki uyarlamalarla geldi. Sen olsan, üç dilekle "
+                 "yetinir miydin?")]),
+        "3": ("Alaaddin'in masalında\naslında iki cin var", [
+            (10, "Alaaddin'in masalında bir değil, iki cin var. Biliyor muydun? İlki yüzükteki küçük cin. Alaaddin "
+                 "mağarada mahsur kalınca onu kurtaran, bu cin."),
+            (11, "İkincisi lambanın dev cini. Herkes onu hatırlıyor, ama asıl kahraman belki de unutulan küçük cindi. "
+                 "Sen hangisini seçerdin?")]),
+    },
+}.get(L.BOLUM)
+
+
 # Her sahnede dikey kadrajın ortalanacağı yatay nokta (0 = sol, 1 = sağ)
 FOCUS = {
     2: {6: 0.47, 7: 0.3, 12: 0.45, 13: 0.55, 15: 0.5},
     3: {1: 0.5, 2: 0.62, 12: 0.42, 14: 0.5},
-    4: {5: 0.33, 6: 0.45, 9: 0.4, 10: 0.42, 11: 0.5},
+    4: {2: 0.38, 5: 0.33, 6: 0.45, 9: 0.4, 10: 0.42, 11: 0.5},
 }[L.BOLUM]
 
 
@@ -96,10 +136,29 @@ def vertical(sc, k, u):
 def make(name, part, rng, top):
     lt = line_times(part)
     a, b = lt[rng[0]][0], lt[rng[1] - 1][1]
+    render(name, [(s - a, e - a, text, sc) for s, e, text, sc in lt[rng[0]:rng[1]]], b - a, top,
+           f"{L.SES}/p{part}.mp3", a)
+
+
+def make_metin(name, top, parts):
+    """Ayrı seslendirilmiş kısa Shorts metni: sahne süreleri metin uzunluğuna göre dağıtılır."""
+    ses = f"{L.SES}/short_{name}.mp3"
+    d = L.duration(ses)
+    total = sum(len(x) for _, x in parts)
+    lines, t = [], 0.0
+    for sc, x in parts:
+        ld = d * len(x) / total
+        lines.append((t, t + ld, x, sc))
+        t += ld
+    render(name, lines, d, top, ses, 0.0)
+
+
+def render(name, lines, speech, top, ses, a):
+    """lines: [(başlangıç, bitiş, metin, sahne)] short içi zaman; ses dosyası a saniyesinden itibaren speech kadar."""
+    b = a + speech
     segs = []  # (başlangıç, bitiş, sahne) short içi zaman
     subs = []
-    for s, e, text, sc in lt[rng[0]:rng[1]]:
-        s, e = s - a, e - a
+    for s, e, text, sc in lines:
         if segs and segs[-1][2] == sc:
             segs[-1][1] = e
         else:
@@ -119,7 +178,7 @@ def make(name, part, rng, top):
     out = f"baska_bir_masalda_{L.B}_short_{name}.mp4"
     proc = subprocess.Popen(
         ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
-         "-r", str(FPS), "-i", "-", "-ss", f"{a:.3f}", "-t", f"{b - a:.3f}", "-i", f"{L.SES}/p{part}.mp3",
+         "-r", str(FPS), "-i", "-", "-ss", f"{a:.3f}", "-t", f"{b - a:.3f}", "-i", ses,
          "-i", f"{L.B}_muzik.wav",
          "-filter_complex",
          f"[1:a]apad=whole_dur={dur}[v];[2:a]atrim=0:{dur},volume=0.25[m];"
@@ -161,4 +220,7 @@ def make(name, part, rng, top):
 
 if __name__ == "__main__":
     for s in SHORTS:
-        make(*s)
+        if METIN and s[0] in METIN:
+            make_metin(s[0], *METIN[s[0]])
+        else:
+            make(*s)
