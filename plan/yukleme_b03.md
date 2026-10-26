@@ -51,10 +51,45 @@ pamuk prenses, pamuk prenses gerçek hikayesi, pamuk prenses masalı, kötü kra
 
 ## Shorts (29, 30 ve 31 Ekim, 15:00)
 
-| Dosya | Başlık | Açıklama ilk satırı |
-| --- | --- | --- |
-| `baska_bir_masalda_b03_short_1.mp4` | Pamuk Prenses'in Kötü Kraliçesi Aslında Kimdi? 🪞 #shorts | İlk baskıda üvey anne değildi. Tamamı kanalda. |
-| `baska_bir_masalda_b03_short_2.mp4` | Pamuk Prenses'i Öpücük Uyandırmadı 🍎 #shorts | Grimm'de onu sakar bir uşak kurtardı. Tamamı kanalda. |
-| `baska_bir_masalda_b03_short_3.mp4` | Gerçek Bir "Sihirli Ayna" Var mı? ✨ #shorts | Almanya'daki Lohr kasabasının teorisi. Tamamı kanalda. |
+Shorts'lar ayrı yazılmış kısa metinlerle yeniden yapıldı (22–26 sn, soruyla başlıyor).
 
-Her Shorts'ta "İlgili video" olarak uzun videoyu seç.
+### Short 1 – 29 Ekim, 15:00 · `baska_bir_masalda_b03_short_1.mp4`
+**Başlık:**
+```
+Pamuk Prenses'in Kötü Kraliçesi Aslında Kimdi? 🪞 #shorts
+```
+**Açıklama:**
+```
+Pamuk Prenses'in kötü kraliçesi aslında kimdi? Grimm Kardeşler'in 1812'deki ilk baskısında cevap çok şaşırtıcı. 🪞
+Tamamı kanalda ▶ Pamuk Prenses'in Bilinmeyen Gerçek Hikâyesi
+
+#shorts #pamukprenses #grimmmasalları #masal #başkabirmasalda
+```
+
+### Short 2 – 30 Ekim, 15:00 · `baska_bir_masalda_b03_short_2.mp4`
+**Başlık:**
+```
+Pamuk Prenses'i Öpücük Uyandırmadı! Peki Ne Uyandırdı? 🍎 #shorts
+```
+**Açıklama:**
+```
+Grimm'in masalında Pamuk Prenses'i bir öpücük değil, sakar bir uşak uyandırıyor. 🍎
+Tamamı kanalda ▶ Pamuk Prenses'in Bilinmeyen Gerçek Hikâyesi
+
+#shorts #pamukprenses #masal #masallarıngerçekyüzü #başkabirmasalda
+```
+
+### Short 3 – 31 Ekim, 15:00 · `baska_bir_masalda_b03_short_3.mp4`
+**Başlık:**
+```
+Gerçek Bir Sihirli Ayna Var mı? ✨ #shorts
+```
+**Açıklama:**
+```
+Almanya'daki Lohr kasabasında, üzerinde "kendini sevme" yazan yüzlerce yıllık bir ayna duruyor. Pamuk Prenses'in aynası bu muydu? ✨
+Tamamı kanalda ▶ Pamuk Prenses'in Bilinmeyen Gerçek Hikâyesi
+
+#shorts #pamukprenses #sihirliayna #masal #başkabirmasalda
+```
+
+Her birinde: Kitle **Çocuklar için yapılmadı**, Değiştirilmiş içerik **Evet**, **İlgili video** = bu bölümün uzun videosu.

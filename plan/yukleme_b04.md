@@ -52,10 +52,45 @@ alaaddin, alaaddin gerçek hikayesi, alaaddin ve sihirli lamba, alaaddin masalı
 
 ## Shorts (1, 2 ve 3 Kasım, 15:00)
 
-| Dosya | Başlık | Açıklama ilk satırı |
-| --- | --- | --- |
-| `baska_bir_masalda_b04_short_1.mp4` | Alaaddin'i Aslında Kim Anlattı? 🪔 #shorts | 1709'da Paris'te Halepli bir genç. Tamamı kanalda ▶ |
-| `baska_bir_masalda_b04_short_2.mp4` | Alaaddin'de Üç Dilek Hakkı Yoktu! 🧞 #shorts | Orijinal masalda cin her isteği yerine getiriyor. Tamamı kanalda ▶ |
-| `baska_bir_masalda_b04_short_3.mp4` | Alaaddin'in Masalında Aslında İki Cin Var ✨ #shorts | Onu mağaradan kurtaran yüzüğün ciniydi. Tamamı kanalda ▶ |
+Shorts'lar ayrı yazılmış kısa metinlerle yeniden yapıldı (22–26 sn, soruyla başlıyor).
 
-Her Shorts'ta "İlgili video" olarak uzun videoyu seç. Başlıkta "çok yakında" kullanma.
+### Short 1 – 1 Kasım, 15:00 · `baska_bir_masalda_b04_short_1.mp4`
+**Başlık:**
+```
+Alaaddin'i Aslında Kim Anlattı? 🪔 #shorts
+```
+**Açıklama:**
+```
+Alaaddin'i 1709'da Paris'te Halepli genç bir masalcı, Hanna Diyab anlattı. Ama kitapta adı bile yoktu. 🪔
+Tamamı kanalda ▶ Alaaddin'in Bilinmeyen Gerçek Hikâyesi
+
+#shorts #alaaddin #binbirgecemasalları #masal #başkabirmasalda
+```
+
+### Short 2 – 2 Kasım, 15:00 · `baska_bir_masalda_b04_short_2.mp4`
+**Başlık:**
+```
+Alaaddin'in Cini Üç Dilek Vermiyordu! 🧞 #shorts
+```
+**Açıklama:**
+```
+Orijinal Alaaddin masalında üç dilek kuralı yok: lamba kimin elindeyse cin onun her isteğini yerine getiriyor. Sen olsan üç dilekle yetinir miydin? 🧞
+Tamamı kanalda ▶ Alaaddin'in Bilinmeyen Gerçek Hikâyesi
+
+#shorts #alaaddin #sihirlilamba #masal #başkabirmasalda
+```
+
+### Short 3 – 3 Kasım, 15:00 · `baska_bir_masalda_b04_short_3.mp4`
+**Başlık:**
+```
+Alaaddin'in Masalında Aslında İki Cin Var ✨ #shorts
+```
+**Açıklama:**
+```
+Alaaddin'i mağaradan kurtaran lambanın cini değil, yüzükteki küçük cindi. Sen hangisini seçerdin? ✨
+Tamamı kanalda ▶ Alaaddin'in Bilinmeyen Gerçek Hikâyesi
+
+#shorts #alaaddin #cin #masal #başkabirmasalda
+```
+
+Her birinde: Kitle **Çocuklar için yapılmadı**, Değiştirilmiş içerik **Evet**, **İlgili video** = bu bölümün uzun videosu.
