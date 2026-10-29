@@ -58,3 +58,12 @@ Her sahne komutunun başına eklenir:
 ## Ses
 - Anlatıcı: Fatih Çetinkaya (ElevenLabs, `DM4ogDUNaqwcuIIRkVZK`), model eleven_v4.
 - Müzik: sakin masal fonu, ses -14 LUFS.
+
+## Kredi tasarrufu (Kasım 2026'dan itibaren, hedef bölüm başına ~9–10 bin kredi)
+- 12–14 görsel; `make_v2.py` her görselden 4–6 kadraj çıkarır. Önce Seedream 4 (151 kredi) denenir.
+- En fazla 1 animasyon klibi (açılış). Hareket: kamera, kar/toz efekti, vurgu yazıları.
+- Müzik: kanalın 3 sabit parçası (gizemli, macera, duygusal) tekrar kullanılır; efektler `assets/b05/sfx`.
+- Seslendirme tek seferde, tek alternatifle (generations_count=1); metin onaylanmadan üretilmez.
+- Shorts, uzun senaryodaki kendi başına anlaşılan, soruyla başlayan paragraflardan kesilir.
+- Kapak için bölümün en iyi sahnesi kullanılır; ünlü film karakterine benzememe kuralı istemde baştan yazılır.
+- Ortam (rüzgâr vb.) sesi kullanılmaz; fısıltı en fazla bir yerde.
