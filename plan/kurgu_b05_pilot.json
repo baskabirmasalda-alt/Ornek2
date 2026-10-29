@@ -3,8 +3,6 @@
  "ses": "assets/b05/ses/anlatim_a.mp3",
  "kelimeler": "assets/b05/ses/anlatim_a_kelimeler.json",
  "muzik": "assets/b05/muzik/kanca.mp3",
- "ortam": "assets/b05/sfx/ruzgar.mp3",
- "ortam_ses": 0.07,
  "gecis_sesi": "assets/b05/sfx/vuus.mp3",
  "sahneler": "assets/b05/sahneler",
  "klipler": "assets/b05/klipler",
