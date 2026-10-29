@@ -102,29 +102,29 @@
   },
   {
    "bas": "Disney",
-   "sahne": 7,
-   "hareket": "detay",
+   "sahne": 1,
+   "hareket": "sag",
    "odak": [
-    0.86,
-    0.45
+    0.3,
+    0.4
    ]
   },
   {
    "bas": "Ve sonunda",
-   "sahne": 1,
-   "hareket": "yakin",
+   "sahne": 8,
+   "hareket": "uzak",
    "odak": [
     0.45,
-    0.4
+    0.5
    ]
   },
   {
    "bas": "Ama yolda",
    "sahne": 8,
-   "hareket": "yakin",
+   "hareket": "vurgu",
    "odak": [
-    0.42,
-    0.35
+    0.45,
+    0.3
    ]
   },
   {

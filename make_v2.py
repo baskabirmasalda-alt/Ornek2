@@ -182,7 +182,10 @@ def main(yol):
     mix[:len(ses)] += ses
     zarf = np.abs(ses)
     pencere = int(0.25 * SR)
-    zarf = np.convolve(zarf, np.ones(pencere) / pencere, "same")
+    cs = np.concatenate([[0], np.cumsum(zarf)])  # hızlı kayan ortalama
+    i = np.clip(np.arange(len(zarf)) + pencere // 2, 0, len(zarf))
+    j = np.clip(np.arange(len(zarf)) - pencere // 2, 0, len(zarf))
+    zarf = (cs[i] - cs[j]) / pencere
     konusma = np.zeros(n, np.float32)
     konusma[:len(zarf)] = np.clip(zarf / (zarf.max() * 0.15), 0, 1)
     muzik_ses = 0.32 - 0.20 * konusma  # konuşurken kıs
@@ -224,7 +227,7 @@ def main(yol):
     vin = np.clip(((xx - W / 2) / (W * 0.62)) ** 2 + ((yy - H / 2) / (H * 0.62)) ** 2 - 0.35, 0, 1) * 150
     vin = Image.fromarray(np.dstack([np.zeros((H, W, 3), np.uint8), vin.astype(np.uint8)]), "RGBA")
     brand = Image.new("RGBA", (420, 50), (0, 0, 0, 0))
-    ImageDraw.Draw(brand).text((0, 5), "✦ Başka Bir Masalda", font=BRANDF, fill=(255, 225, 160, 200))
+    ImageDraw.Draw(brand).text((0, 5), "Başka Bir Masalda", font=BRANDF, fill=(255, 225, 160, 200))
     proc = subprocess.Popen(
         ["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS),
          "-i", "-", "-i", wav, "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:v", "libx264", "-preset", "medium",
