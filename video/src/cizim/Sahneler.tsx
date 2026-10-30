@@ -1,5 +1,5 @@
 import React from 'react';
-import {Andersen, ElAynasi, Gerda, Gul, Kay, Kralice, RenGeyigi, Trol} from './Karakterler';
+import {Andersen, BoyaTanim, ElAynasi, Gerda, Gul, Kay, Kralice, RenGeyigi, Trol} from './Karakterler';
 
 // Kodla çizilmiş sahneler (1920x1080). Sıcak, aydınlık masal kitabı paleti: bal, kehribar, krem, sıcak kırmızı.
 // Kural: mor-mavi gradyan yok, uçuşan parçacık yok. Buz/kar beyaz-krem ve çok açık su yeşili düz renklerle.
@@ -17,7 +17,7 @@ const Cam: React.FC<{x: number; y: number; s?: number}> = ({x, y, s = 1}) => (
     <rect x={-8} y={-30} width={16} height={34} fill="#5a3a24" />
     {[[0, 150, 70], [-30, 110, 92], [-62, 74, 112], [-96, 40, 132]].map(([dy, w, h], i) => (
       <g key={i}>
-        <path d={`M 0 ${-dy - h - 80} L ${w / 2 + 24} ${-dy - 34} L ${-w / 2 - 24} ${-dy - 34} Z`} fill={i % 2 ? '#2f4b3b' : '#35543f'} />
+        <path d={`M 0 ${-dy - h - 80} L ${w / 2 + 24} ${-dy - 34} L ${-w / 2 - 24} ${-dy - 34} Z`} fill={i % 2 ? '#2f4b3b' : '#35543f'} filter="url(#hacim)" />
         <path d={`M 0 ${-dy - h - 80} L ${w / 2 + 24} ${-dy - 34} L ${w / 4} ${-dy - 40} Z`} fill="#243b2e" opacity={0.6} />
         <path d={`M 0 ${-dy - h - 78} L ${w / 2 + 10} ${-dy - 48} Q ${w / 4} ${-dy - 58} 0 ${-dy - 50} Q ${-w / 4} ${-dy - 58} ${-w / 2 - 10} ${-dy - 48} Z`} fill="#fbf7ef" opacity={0.92} />
       </g>
@@ -51,6 +51,45 @@ const Isilti: React.FC<{id: string; x: number; y: number; r: number; renk: strin
   </>
 );
 
+
+/** Işık kaynağından yayılan yumuşak huzmeler (sabit, yavaşça nefes alır; parçacık değil). */
+const Huzme: React.FC<{id: string; x: number; y: number; acilar: number[]; boy: number; t: number; renk?: string; guc?: number}> = ({id, x, y, acilar, boy, t, renk = '#fff4d2', guc = 0.32}) => (
+  <g style={{mixBlendMode: 'screen'}}>
+    <defs>
+      <radialGradient id={id} cx={x} cy={y} r={boy} gradientUnits="userSpaceOnUse">
+        <stop offset={0} stopColor={renk} stopOpacity={1} />
+        <stop offset={1} stopColor={renk} stopOpacity={0} />
+      </radialGradient>
+    </defs>
+    {acilar.map((a, i) => {
+      const r = (a * Math.PI) / 180;
+      const g = 0.05 + (i % 3) * 0.02;
+      return (
+        <path
+          key={i}
+          d={`M ${x} ${y} L ${x + Math.cos(r - g) * boy} ${y + Math.sin(r - g) * boy} L ${x + Math.cos(r + g) * boy} ${y + Math.sin(r + g) * boy} Z`}
+          fill={`url(#${id})`}
+          opacity={guc * (0.75 + 0.25 * Math.sin(t * 0.7 + i * 1.7))}
+        />
+      );
+    })}
+  </g>
+);
+
+/** Ufukta sıcak pus: uzak katmanları geriye iter. */
+const Pus: React.FC<{id: string; y: number; h: number; renk?: string; guc?: number}> = ({id, y, h, renk = '#fde9c6', guc = 0.7}) => (
+  <>
+    <defs>
+      <linearGradient id={id} x1="0" y1={y - h} x2="0" y2={y + h} gradientUnits="userSpaceOnUse">
+        <stop offset={0} stopColor={renk} stopOpacity={0} />
+        <stop offset={0.5} stopColor={renk} stopOpacity={guc} />
+        <stop offset={1} stopColor={renk} stopOpacity={0} />
+      </linearGradient>
+    </defs>
+    <rect x={0} y={y - h} width={1920} height={h * 2} fill={`url(#${id})`} />
+  </>
+);
+
 /* ---------------- 1: Buz sarayı, gün doğumu ---------------- */
 const KULELER: [number, number, number][] = [
   [960, 70, 330], [872, 54, 232], [1050, 56, 252], [800, 44, 170], [1122, 48, 182], [742, 38, 118], [1186, 40, 128],
@@ -61,7 +100,7 @@ const Saray: React.FC<{pencere?: boolean}> = ({pencere = true}) => (
     <path d="M 712 572 L 1214 572 L 1214 588 L 712 588 Z" fill="#dcecec" />
     {KULELER.map(([x, w, h], i) => (
       <g key={i}>
-        <rect x={x - w / 2} y={640 - h} width={w} height={h} fill="#f6fbfa" />
+        <rect x={x - w / 2} y={640 - h} width={w} height={h} fill="#f6fbfa" filter="url(#hacim)" />
         <rect x={x} y={640 - h} width={w / 2} height={h} fill="#b9dade" />
         <rect x={x - w / 2} y={640 - h} width={w} height={h} fill="none" stroke="#8fbcc4" strokeWidth={2} />
         <path d={`M ${x - w / 2 - 4} ${640 - h} L ${x} ${640 - h - w * 1.5} L ${x + w / 2 + 4} ${640 - h} Z`} fill="#eef7f7" />
@@ -81,12 +120,15 @@ export const SahneSaray: React.FC<SahneProps> = ({t}) => {
   const isilti = ((t * 0.22) % 1.4) - 0.2;
   return (
     <svg viewBox="0 0 1920 1080" width="100%" height="100%">
+      <BoyaTanim />
       <GokYuzu id="g1" renkler={['#e8884c', '#f1a764', '#f7c88a', '#fbe0b2']} ufuk={640} />
       <Isilti id="i1" x={1190} y={560} r={620} renk="#fff1c8" guc={0.9 + 0.1 * Math.sin(t * 1.3)} />
       <path d="M 0 560 L 160 470 L 300 530 L 460 440 L 640 540 L 820 500 L 980 560 L 1300 480 L 1500 540 L 1700 460 L 1920 520 L 1920 640 L 0 640 Z" fill="#d6a283" />
       <path d="M 160 470 L 200 492 L 175 500 Z M 460 440 L 510 468 L 470 474 Z M 1300 480 L 1340 500 L 1310 505 Z M 1700 460 L 1745 484 L 1712 490 Z" fill="#fbf1e4" />
       <path d="M 0 600 C 300 570 600 610 900 596 C 1200 584 1500 612 1920 590 L 1920 640 L 0 640 Z" fill="#e7c3a0" />
+      <Pus id="p1" y={600} h={70} />
       <circle cx={1190} cy={560} r={58} fill="#fff8e6" />
+      <Huzme id="h1" x={1190} y={560} acilar={[200, 215, 232, 250, 290, 308, 325, 340]} boy={900} t={t} guc={0.22} />
       <Saray />
       <defs>
         <clipPath id="sarayKirp">
@@ -140,6 +182,7 @@ export const SahneKopenhag: React.FC<SahneProps> = ({t}) => {
   const mum = 1 + Math.sin(t * 17) * 0.06 + Math.sin(t * 7.3) * 0.05;
   return (
     <svg viewBox="0 0 1920 1080" width="100%" height="100%">
+      <BoyaTanim />
       <GokYuzu id="g2" renkler={['#ee9f68', '#f5c08a', '#f9dcae', '#fbe8c6']} ufuk={640} />
       <Isilti id="i2" x={300} y={560} r={700} renk="#ffe0a8" guc={0.7} />
       {EVLER.map(([x, w, r], i) => {
@@ -147,7 +190,7 @@ export const SahneKopenhag: React.FC<SahneProps> = ({t}) => {
         const ust = 690 - h;
         return (
           <g key={i}>
-            <rect x={x} y={ust} width={w} height={h} fill={r} />
+            <rect x={x} y={ust} width={w} height={h} fill={r} filter="url(#hacim)" />
             <rect x={x + w - 18} y={ust} width={18} height={h} fill="#000" opacity={0.12} />
             <path d={`M ${x - 4} ${ust} L ${x + w / 2} ${ust - 70} L ${x + w + 4} ${ust} Z`} fill="#7a3a2a" />
             <path d={`M ${x - 4} ${ust} L ${x + w / 2} ${ust - 70} L ${x + w / 2} ${ust - 56} L ${x + 6} ${ust - 4} Z`} fill="#fbf6ee" />
@@ -172,7 +215,7 @@ export const SahneKopenhag: React.FC<SahneProps> = ({t}) => {
       ))}
       {/* tekne */}
       <g transform={`translate(520 ${770 + Math.sin(t * 1.6) * 3})`}>
-        <path d="M -150 0 L 150 0 L 120 40 L -120 40 Z" fill="#4a3426" />
+        <path d="M -150 0 L 150 0 L 120 40 L -120 40 Z" fill="#4a3426" filter="url(#hacim)" />
         <rect x={-150} y={-6} width={300} height={8} fill="#c9a26a" />
         <line x1={0} y1={0} x2={0} y2={-330} stroke="#3e2b1f" strokeWidth={6} />
         <line x1={0} y1={-330} x2={-140} y2={-4} stroke="#3e2b1f" strokeWidth={1.5} />
@@ -193,6 +236,7 @@ export const SahneKopenhag: React.FC<SahneProps> = ({t}) => {
       <Isilti id="i2b" x={1700} y={600} r={520} renk="#fff0c4" guc={0.85 * mum} />
       <rect x={1270} y={180} width={540} height={120} fill="#c98f4a" opacity={0.5} />
       <path d="M 1290 300 L 1290 820 M 1790 300 L 1790 820" stroke="#a66f3a" strokeWidth={10} opacity={0.5} />
+      <Huzme id="h2" x={1745} y={600} acilar={[160, 175, 190, 205]} boy={700} t={t} guc={0.22} />
       <Andersen x={1500} y={690} s={1.15} t={t} />
       <rect x={1220} y={690} width={640} height={36} fill="#7a5236" />
       <path d="M 1220 690 Q 1540 672 1860 690 L 1860 700 L 1220 700 Z" fill="#fbf6ee" />
@@ -226,6 +270,7 @@ export const SahneAtolye: React.FC<SahneProps> = ({t}) => {
   const lamba = Math.sin(t * 1.4) * 2.5;
   return (
     <svg viewBox="0 0 1920 1080" width="100%" height="100%">
+      <BoyaTanim />
       <rect width={1920} height={1080} fill="#8a5530" />
       <Isilti id="i3" x={1150} y={220} r={1100} renk="#f6c983" guc={1} />
       {/* raflar */}
@@ -237,7 +282,7 @@ export const SahneAtolye: React.FC<SahneProps> = ({t}) => {
       ))}
       {[[120, 300, '#d9a35a'], [200, 300, '#8aa06a'], [270, 300, '#c4683f'], [420, 300, '#e3c27a'], [560, 300, '#7f9a8a'], [1420, 300, '#c4683f'], [1520, 300, '#d9a35a'], [1700, 300, '#8aa06a'], [160, 500, '#e3c27a'], [330, 500, '#c4683f'], [1450, 500, '#7f9a8a'], [1780, 500, '#d9a35a']].map(([x, y, r], i) => (
         <g key={i}>
-          <rect x={Number(x)} y={Number(y) - 70 - (i % 3) * 14} width={46} height={70 + (i % 3) * 14} rx={8} fill={String(r)} />
+          <rect x={Number(x)} y={Number(y) - 70 - (i % 3) * 14} width={46} height={70 + (i % 3) * 14} rx={8} fill={String(r)} filter="url(#hacim)" />
           <rect x={Number(x) - 3} y={Number(y) - 80 - (i % 3) * 14} width={52} height={12} rx={3} fill="#6e4a2a" />
           <rect x={Number(x) + 8} y={Number(y) - 56 - (i % 3) * 14} width={10} height={40} fill="#fff" opacity={0.25} />
         </g>
@@ -259,6 +304,7 @@ export const SahneAtolye: React.FC<SahneProps> = ({t}) => {
         <path d="M 1100 160 L 1200 160 L 1196 150 L 1104 150 Z" fill="#c8963e" />
         <ellipse cx={1150} cy={166} rx={22} ry={12} fill="#fff3c8" />
       </g>
+      <Huzme id="h3" x={1150} y={165} acilar={[70, 80, 90, 100, 110]} boy={950} t={t} guc={0.2} />
       {/* tezgâh */}
       <rect x={0} y={780} width={1920} height={300} fill="#6e4426" />
       <rect x={0} y={770} width={1920} height={22} fill="#94623a" />
@@ -267,7 +313,7 @@ export const SahneAtolye: React.FC<SahneProps> = ({t}) => {
       ))}
       {/* tezgâhtaki taze çiçekler (aynada gri görünür) */}
       <g transform="translate(470 780)">
-        <path d="M -36 0 L 36 0 L 28 -90 Q 0 -100 -28 -90 Z" fill="#4f88a0" />
+        <path d="M -36 0 L 36 0 L 28 -90 Q 0 -100 -28 -90 Z" fill="#4f88a0" filter="url(#hacim)" />
         <path d="M -24 -96 L 24 -96 L 20 -110 L -20 -110 Z" fill="#3f7088" />
         <path d="M -6 -108 C -20 -160 -40 -180 -46 -200 M 0 -108 C 0 -170 6 -200 4 -230 M 6 -108 C 20 -150 40 -170 50 -196" stroke="#4c7a3c" strokeWidth={4} fill="none" />
         <Gul x={-46} y={-180} s={1.1} d={-15} />
@@ -300,6 +346,7 @@ export const SahneAyna: React.FC<SahneProps> = ({t, olay}) => {
   const bob = Math.sin(t * 1.6) * 8;
   return (
     <svg viewBox="0 0 1920 1080" width="100%" height="100%">
+      <BoyaTanim />
       <GokYuzu id="g4" renkler={['#dd7a48', '#ea9b64', '#f3bf88', '#f9d9ac']} ufuk={760} />
       <Isilti id="i4" x={1150} y={470} r={650} renk="#fff0c8" guc={0.8} />
       {[[200, 640, 220, 60], [600, 700, 260, 70], [1500, 660, 300, 70], [1800, 720, 240, 60], [980, 760, 360, 80]].map(([x, y, rx, ry], i) => (
@@ -308,7 +355,7 @@ export const SahneAyna: React.FC<SahneProps> = ({t, olay}) => {
       {/* çatılar */}
       {[[-40, 840, 380, '#8a4a36'], [300, 880, 340, '#6d4a3a'], [600, 850, 400, '#9a5a3c'], [960, 900, 360, '#7a4a34'], [1280, 860, 380, '#8a4a36'], [1620, 890, 360, '#6d4a3a']].map(([x, y, w, r], i) => (
         <g key={i}>
-          <rect x={Number(x)} y={Number(y)} width={Number(w)} height={300} fill={String(r)} />
+          <rect x={Number(x)} y={Number(y)} width={Number(w)} height={300} fill={String(r)} filter="url(#hacim)" />
           <path d={`M ${Number(x) - 20} ${Number(y)} L ${Number(x) + Number(w) / 2} ${Number(y) - 120} L ${Number(x) + Number(w) + 20} ${Number(y)} Z`} fill="#5a3426" />
           <path d={`M ${Number(x) - 20} ${Number(y)} L ${Number(x) + Number(w) / 2} ${Number(y) - 120} L ${Number(x) + Number(w) + 20} ${Number(y)} L ${Number(x) + Number(w)} ${Number(y) - 12} L ${Number(x) + Number(w) / 2} ${Number(y) - 100} L ${Number(x)} ${Number(y) - 12} Z`} fill="#fbf6ee" />
           <rect x={Number(x) + Number(w) * 0.7} y={Number(y) - 150} width={34} height={90} fill="#6a3a2a" />
@@ -350,18 +397,20 @@ export const SahneBahce: React.FC<SahneProps> = ({t, olay}) => {
       {Array.from({length: adet}, (_, i) => (
         <Gul key={i} x={x + 30 + (i * (w - 60)) / Math.max(1, adet - 1)} y={y + 4 + (i % 2) * 10} s={s * (1 + (i % 3) * 0.12)} d={Math.sin(t * 1.2 + i) * 4 + ((i % 3) - 1) * 10} />
       ))}
-      <rect x={x} y={y} width={w} height={80 * s} fill="#8a5a36" />
+      <rect x={x} y={y} width={w} height={80 * s} fill="#8a5a36" filter="url(#hacim)" />
       <rect x={x} y={y} width={w} height={10} fill="#fbf6ee" />
       <path d={`M ${x} ${y + 40 * s} L ${x + w} ${y + 40 * s}`} stroke="#6e4426" strokeWidth={3} />
     </g>
   );
   return (
     <svg viewBox="0 0 1920 1080" width="100%" height="100%">
+      <BoyaTanim />
       <GokYuzu id="g5" renkler={['#e8935a', '#f2b77e', '#f7d4a4']} ufuk={700} />
       <Isilti id="i5" x={1500} y={600} r={700} renk="#fff0c8" guc={0.7} />
+      <Pus id="p5" y={600} h={80} guc={0.5} />
       {[[560, 560, 200], [760, 600, 180], [940, 540, 220], [1160, 590, 190], [1350, 550, 230], [1580, 600, 200], [1780, 560, 220]].map(([x, y, w], i) => (
         <g key={i}>
-          <rect x={x} y={y} width={w} height={300} fill={i % 2 ? '#b8735a' : '#c98a66'} />
+          <rect x={x} y={y} width={w} height={300} fill={i % 2 ? '#b8735a' : '#c98a66'} filter="url(#hacim)" />
           <path d={`M ${x - 10} ${y} L ${x + w / 2} ${y - 80} L ${x + w + 10} ${y} Z`} fill="#fbf6ee" />
           <rect x={x + w * 0.6} y={y - 110} width={26} height={60} fill="#8a4a36" />
           <rect x={x + 30} y={y + 50} width={36} height={44} fill="#ffd98a" />
@@ -399,11 +448,14 @@ export const SahneBahce: React.FC<SahneProps> = ({t, olay}) => {
 /* ---------------- 6: Kuzeye yolculuk, Gerda ve ren geyiği ---------------- */
 export const SahneYolculuk: React.FC<SahneProps> = ({t}) => (
   <svg viewBox="0 0 1920 1080" width="100%" height="100%">
+      <BoyaTanim />
     <GokYuzu id="g6" renkler={['#e58a48', '#f0ab62', '#f7cc8a', '#fce3b4']} ufuk={580} />
     <Isilti id="i6" x={1250} y={545} r={800} renk="#fff4cf" guc={0.95} />
     <path d="M 0 520 C 300 480 600 530 900 506 C 1200 486 1500 520 1920 500 L 1920 590 L 0 590 Z" fill="#e3b88f" />
     <path d="M 0 560 C 400 540 800 575 1200 556 C 1500 545 1700 565 1920 555 L 1920 600 L 0 600 Z" fill="#eccdab" />
+    <Pus id="p6" y={570} h={60} />
     <circle cx={1250} cy={548} r={56} fill="#fff8e4" />
+    <Huzme id="h6" x={1250} y={548} acilar={[195, 210, 228, 312, 330, 345]} boy={1000} t={t} guc={0.22} />
     <rect x={0} y={580} width={1920} height={500} fill="#fbf3e6" />
     <path d="M 0 700 C 400 680 900 720 1920 690 L 1920 720 C 900 750 400 710 0 730 Z M 0 860 C 500 840 1100 880 1920 850 L 1920 880 C 1100 910 500 870 0 890 Z" fill="#e6d0b3" />
     <path d="M 1236 585 L 1264 585 L 1020 1080 L 860 1080 Z" fill="#ffe9b8" opacity={0.65} />
@@ -418,7 +470,7 @@ export const SahneYolculuk: React.FC<SahneProps> = ({t}) => (
 /* ---------------- 8: Karlar Kraliçesi'nin buz salonu ---------------- */
 const Sutun: React.FC<{x: number; w: number}> = ({x, w}) => (
   <g>
-    <rect x={x - w / 2} y={60} width={w} height={830} fill="#f3f9f9" />
+    <rect x={x - w / 2} y={60} width={w} height={830} fill="#f3f9f9" filter="url(#hacim)" />
     <rect x={x} y={60} width={w / 2} height={830} fill="#d6eaec" />
     <rect x={x + w / 4} y={60} width={w / 4} height={830} fill="#c2dde1" />
     <path d={`M ${x - w / 2 + 12} 80 L ${x - w / 2 + 12} 880`} stroke="#ffffff" strokeWidth={6} opacity={0.8} />
@@ -430,6 +482,7 @@ export const SahneSalon: React.FC<SahneProps> = ({t}) => {
   const isik = 0.32 + 0.06 * Math.sin(t * 0.9);
   return (
     <svg viewBox="0 0 1920 1080" width="100%" height="100%">
+      <BoyaTanim />
       <GokYuzu id="g8" renkler={['#c4925f', '#d4aa7c', '#e2c39a']} ufuk={880} />
       {[420, 1500].map((x) => (
         <g key={x}>
@@ -439,6 +492,8 @@ export const SahneSalon: React.FC<SahneProps> = ({t}) => {
           <path d={`M ${x - 120} 760 L ${x + 120} 760 L ${x + 420} 1080 L ${x - 60} 1080 Z`} fill="#fff4d4" opacity={isik} />
         </g>
       ))}
+      <Huzme id="h8a" x={420} y={300} acilar={[55, 65, 75, 88]} boy={900} t={t} guc={0.25} />
+      <Huzme id="h8b" x={1500} y={300} acilar={[92, 105, 115, 125]} boy={900} t={t} guc={0.25} />
       <Isilti id="i8" x={960} y={420} r={760} renk="#fff3d2" guc={0.75} />
       <Sutun x={170} w={130} />
       <Sutun x={700} w={110} />
@@ -466,6 +521,7 @@ export const SahneKitap: React.FC<SahneProps> = ({t, olay}) => {
   const sx = Math.cos(sayfa * Math.PI);
   return (
     <svg viewBox="0 0 1920 1080" width="100%" height="100%">
+      <BoyaTanim />
       <rect width={1920} height={1080} fill="#7a4c2e" />
       <Isilti id="i9" x={1480} y={560} r={1000} renk="#f6c27a" guc={0.85 * mum} />
       {/* buzlu pencere */}
@@ -487,7 +543,7 @@ export const SahneKitap: React.FC<SahneProps> = ({t, olay}) => {
       ))}
       {/* kapalı eski kitap */}
       <g transform="translate(300 860) rotate(-8)">
-        <rect x={-170} y={-60} width={340} height={120} rx={8} fill="#6b3a22" />
+        <rect x={-170} y={-60} width={340} height={120} rx={8} fill="#6b3a22" filter="url(#hacim)" />
         <rect x={-170} y={40} width={340} height={20} fill="#efe2c4" />
         <rect x={-120} y={-40} width={240} height={60} rx={6} fill="none" stroke="#d9b04a" strokeWidth={4} />
         <circle r={14} fill="none" stroke="#d9b04a" strokeWidth={3} cy={-10} />
@@ -523,7 +579,7 @@ export const SahneKitap: React.FC<SahneProps> = ({t, olay}) => {
       <g transform="translate(1520 780)">
         <ellipse cx={0} cy={0} rx={70} ry={18} fill="#b8862e" />
         <ellipse cx={0} cy={-6} rx={56} ry={13} fill="#d9a744" />
-        <rect x={-24} y={-190} width={48} height={184} fill="#f5ecd6" />
+        <rect x={-24} y={-190} width={48} height={184} fill="#f5ecd6" filter="url(#hacim)" />
         <rect x={6} y={-190} width={18} height={184} fill="#ddd0b4" />
         <path d="M -24 -190 Q -30 -170 -20 -150 L -14 -190 Z" fill="#f8f1df" />
         <line x1={0} y1={-190} x2={0} y2={-200} stroke="#3a2a1a" strokeWidth={3} />
@@ -532,10 +588,11 @@ export const SahneKitap: React.FC<SahneProps> = ({t, olay}) => {
           <path d="M 0 -36 C 7 -22 7 -8 0 -3 C -7 -8 -7 -22 0 -36 Z" fill="#fff6d6" />
         </g>
       </g>
+      <Huzme id="h9" x={1520} y={1000 - 1000 + 560} acilar={[150, 170, 190, 210, 330, 350, 10]} boy={800} t={t} guc={0.16} />
       {/* elma ve çam dalı */}
       <g transform="translate(1720 900)">
-        <circle cx={-16} r={52} fill="#c22b26" />
-        <circle cx={18} r={50} fill="#b2241f" />
+        <circle cx={-16} r={52} fill="#c22b26" filter="url(#hacim)" />
+        <circle cx={18} r={50} fill="#b2241f" filter="url(#hacim)" />
         <ellipse cx={-30} cy={-18} rx={14} ry={20} fill="#e66a5c" opacity={0.6} />
         <path d="M 0 -46 Q 4 -66 12 -74" stroke="#5a3a20" strokeWidth={5} fill="none" />
         <path d="M 10 -66 C 30 -84 50 -74 54 -66 C 40 -60 24 -60 10 -66 Z" fill="#5f8a46" />

@@ -30,6 +30,7 @@ const Kamera: React.FC<{hareket?: Hareket; odak?: [number, number]; children: Re
     <AbsoluteFill style={{overflow: 'hidden', opacity}}>
       <AbsoluteFill style={{transform: `translateX(${dx * (u - 0.5) * 100}%) scale(${z})`, transformOrigin: `${odak[0] * 100}% ${odak[1] * 100}%`, filter: 'saturate(1.12) contrast(1.06)'}}>
         {children}
+        <Img src={staticFile('assets/b05/cizim/leke.jpg')} style={{position: 'absolute', inset: 0, width: '100%', height: '100%', mixBlendMode: 'soft-light', opacity: 0.6}} />
         <Img src={staticFile('assets/b05/cizim/tuval.jpg')} style={{position: 'absolute', inset: 0, width: '100%', height: '100%', mixBlendMode: 'soft-light', opacity: 0.55}} />
       </AbsoluteFill>
     </AbsoluteFill>
