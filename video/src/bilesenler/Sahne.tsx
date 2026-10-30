@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig, Easing} from 'remotion';
 
-export type Hareket = 'yakin' | 'uzak' | 'sol' | 'sag' | 'vurgu';
+export type Hareket = 'yakin' | 'uzak' | 'sol' | 'sag' | 'vurgu' | 'detay';
 
 const HAREKET: Record<Hareket, [number, number, number]> = {
   // başlangıç yakınlığı, bitiş yakınlığı, yatay kayma (genişliğin oranı)
@@ -10,6 +10,7 @@ const HAREKET: Record<Hareket, [number, number, number]> = {
   sol: [1.1, 1.1, 0.05],
   sag: [1.1, 1.1, -0.05],
   vurgu: [1.25, 1.35, 0],
+  detay: [1.8, 1.95, 0],
 };
 
 /** Ken Burns hareketli tek görsel. odak: [x, y] 0–1 arası, görselin nereye yaklaşılacağı. */
@@ -20,7 +21,7 @@ export const Sahne: React.FC<{gorsel: string; hareket?: Hareket; odak?: [number,
 }) => {
   const frame = useCurrentFrame();
   const {durationInFrames} = useVideoConfig();
-  const [z0, z1, dx] = HAREKET[hareket];
+  const [z0, z1, dx] = HAREKET[hareket] ?? HAREKET.yakin;
   const u = interpolate(frame, [0, durationInFrames], [0, 1], {
     extrapolateRight: 'clamp',
     easing: Easing.inOut(Easing.cubic),

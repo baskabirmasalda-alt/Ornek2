@@ -33,9 +33,12 @@ const vurgular = (k.vurgular ?? []).map((v) => ({
   sure: v.sure ?? 1.6,
   satirlar: v.metin.split('/').map((s) => ({metin: s.split(';').map((p) => p.split('|')[0]).join(''), renk: s.split(';')[0].split('|')[1] ?? 'beyaz'})),
 }));
+const efektler = (k.efektler ?? []).map((e) => ({bas: bul(e.bas) + (e.kay ?? 0), dosya: e.dosya, ses: e.ses ?? 0.7}));
+const sessizlik = (k.sessizlik ?? []).map((x) => ({bas: bul(x.bas), sure: x.sure ?? 0.9}));
+const animasyonlar = (k.animasyonlar ?? []).map((x) => ({...x, bas: bul(x.bas)}));
 const rel = (p) => (p ? p.replace(/^assets\//, 'assets/') : null);
 fs.writeFileSync(cikti, JSON.stringify({
   sure, ses: rel(k.ses), muzik: rel(k.muzik), sahneler: k.sahneler.replace(/^assets\//, 'assets/'),
-  planlar, vurgular, kelimeler: words.map(({text, start, end}) => ({text, start, end})),
+  planlar, vurgular, efektler, sessizlik, animasyonlar, gecis_sesi: k.gecis_sesi ?? null, kelimeler: words.map(({text, start, end}) => ({text, start, end})),
 }, null, 1));
 console.log('yazıldı:', cikti, sure.toFixed(1), 'sn,', planlar.length, 'plan');

@@ -1,0 +1,306 @@
+{
+ "cikti": "baska_bir_masalda_b05_deneme.mp4",
+ "ses": "assets/b05/ses/anlatim_a.mp3",
+ "kelimeler": "assets/b05/ses/anlatim_a_kelimeler.json",
+ "muzik": "assets/b05/muzik/kanca.mp3",
+ "gecis_sesi": "assets/b05/sfx/vuus.mp3",
+ "sahneler": "assets/b05/sahneler",
+ "klipler": "assets/b05/klipler",
+ "son_bosluk": 2.5,
+ "planlar": [
+  {
+   "bas": "Bu masalı",
+   "sahne": 1,
+   "hareket": "yakin",
+   "odak": [
+    0.55,
+    0.45
+   ]
+  },
+  {
+   "bas": "Ama orijinalinde",
+   "sahne": 8,
+   "hareket": "uzak",
+   "odak": [
+    0.4,
+    0.5
+   ]
+  },
+  {
+   "bas": "Yıl 1844",
+   "sahne": 2,
+   "hareket": "sag",
+   "odak": [
+    0.55,
+    0.5
+   ]
+  },
+  {
+   "bas": "kötü kalpli",
+   "sahne": 3,
+   "hareket": "yakin",
+   "odak": [
+    0.6,
+    0.5
+   ]
+  },
+  {
+   "bas": "Bu ayna",
+   "sahne": 3,
+   "hareket": "vurgu",
+   "odak": [
+    0.45,
+    0.4
+   ]
+  },
+  {
+   "bas": "Ve bir gün",
+   "sahne": 4,
+   "hareket": "uzak",
+   "odak": [
+    0.6,
+    0.45
+   ]
+  },
+  {
+   "bas": "Parçalardan biri",
+   "sahne": 5,
+   "hareket": "yakin",
+   "odak": [
+    0.62,
+    0.45
+   ]
+  },
+  {
+   "bas": "Ve kalbi",
+   "sahne": 5,
+   "hareket": "detay",
+   "odak": [
+    0.66,
+    0.3
+   ]
+  },
+  {
+   "bas": "Onu kurtarmak",
+   "sahne": 6,
+   "hareket": "sol",
+   "odak": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "bas": "Bir prens",
+   "sahne": 6,
+   "hareket": "vurgu",
+   "odak": [
+    0.42,
+    0.5
+   ]
+  },
+  {
+   "bas": "Disney",
+   "sahne": 1,
+   "hareket": "sag",
+   "odak": [
+    0.3,
+    0.4
+   ]
+  },
+  {
+   "bas": "Ve sonunda",
+   "sahne": 8,
+   "hareket": "uzak",
+   "odak": [
+    0.45,
+    0.5
+   ]
+  },
+  {
+   "bas": "Ama yolda",
+   "sahne": 8,
+   "hareket": "vurgu",
+   "odak": [
+    0.45,
+    0.3
+   ]
+  },
+  {
+   "bas": "Bu akşam",
+   "sahne": 9,
+   "hareket": "yakin",
+   "odak": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "bas": "Üçüncüsü",
+   "sahne": 9,
+   "hareket": "vurgu",
+   "odak": [
+    0.4,
+    0.7
+   ]
+  },
+  {
+   "bas": "Çünkü o",
+   "sahne": 1,
+   "hareket": "uzak",
+   "odak": [
+    0.5,
+    0.45
+   ]
+  }
+ ],
+ "vurgular": [
+  {
+   "bas": "Elsa",
+   "metin": "ELSA YOK|beyaz",
+   "sure": 1.0
+  },
+  {
+   "bas": "Anna",
+   "metin": "ANNA YOK|beyaz",
+   "sure": 1.0
+  },
+  {
+   "bas": "Olaf",
+   "metin": "OLAF YOK!|kirmizi",
+   "sure": 1.2
+  },
+  {
+   "bas": "1844",
+   "metin": "1844|altin/KOPENHAG|beyaz",
+   "sure": 2.2
+  },
+  {
+   "bas": "paramparça",
+   "metin": "PARAMPARÇA|beyaz",
+   "sure": 1.4
+  },
+  {
+   "bas": "Gerda",
+   "metin": "GERDA|altin",
+   "sure": 1.4
+  },
+  {
+   "bas": "yetmiş",
+   "metin": "70 YILDAN FAZLA|altin",
+   "sure": 2.2
+  },
+  {
+   "bas": "kahramana",
+   "metin": "KAHRAMANA|altin/DÖNÜŞTÜ|beyaz",
+   "sure": 1.8
+  },
+  {
+   "bas": "üç sırrını",
+   "metin": "3 SIR|altin",
+   "sure": 1.8
+  },
+  {
+   "bas": "başka bir masalda",
+   "metin": "BAŞKA BİR|beyaz/MASALDA|altin",
+   "sure": 2.4
+  }
+ ],
+ "efektler": [
+  {
+   "bas": "Elsa",
+   "dosya": "assets/b05/sfx/vurus.mp3",
+   "ses": 0.55
+  },
+  {
+   "bas": "Anna",
+   "dosya": "assets/b05/sfx/vurus.mp3",
+   "ses": 0.55
+  },
+  {
+   "bas": "Olaf",
+   "dosya": "assets/b05/sfx/vurus.mp3",
+   "ses": 0.8
+  },
+  {
+   "bas": "1844",
+   "dosya": "assets/b05/sfx/vurus.mp3",
+   "ses": 0.7
+  },
+  {
+   "bas": "paramparça",
+   "dosya": "assets/b05/sfx/ayna.mp3",
+   "ses": 0.9,
+   "kay": -0.05
+  },
+  {
+   "bas": "buz gibi",
+   "dosya": "assets/b05/sfx/buz.mp3",
+   "ses": 0.7
+  },
+  {
+   "bas": "Gerda",
+   "dosya": "assets/b05/sfx/vurus.mp3",
+   "ses": 0.7
+  },
+  {
+   "bas": "kahramana",
+   "dosya": "assets/b05/sfx/vurus.mp3",
+   "ses": 0.8
+  },
+  {
+   "bas": "Bu akşam",
+   "dosya": "assets/b05/sfx/sayfa.mp3",
+   "ses": 0.6,
+   "kay": -0.2
+  },
+  {
+   "bas": "üç sırrını",
+   "dosya": "assets/b05/sfx/vurus.mp3",
+   "ses": 0.7
+  },
+  {
+   "bas": "başka bir masalda",
+   "dosya": "assets/b05/sfx/vurus.mp3",
+   "ses": 0.9
+  }
+ ],
+ "sessizlik": [
+  {
+   "bas": "paramparça",
+   "sure": 1.0
+  },
+  {
+   "bas": "Küçük bir kız",
+   "sure": 0.8
+  },
+  {
+   "bas": "kahramana",
+   "sure": 1.1
+  },
+  {
+   "bas": "başka bir masalda",
+   "sure": 0.9
+  }
+ ],
+ "animasyonlar": [
+  {
+   "tur": "kirilma",
+   "bas": "paramparça",
+   "sure": 1.4
+  },
+  {
+   "tur": "buz",
+   "bas": "buz gibi",
+   "sure": 2.0,
+   "merkez": [
+    0.62,
+    0.62
+   ]
+  },
+  {
+   "tur": "kristaller",
+   "bas": "üç sırrını",
+   "sure": 2.6
+  }
+ ]
+}
