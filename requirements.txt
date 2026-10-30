@@ -1,5 +1,5 @@
 # Başka Bir Masalda – Python araçları
 numpy
 Pillow
-yt-dlp
+yt-dlp[default]
 faster-whisper

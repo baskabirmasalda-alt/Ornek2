@@ -10,6 +10,9 @@ bir CTranslate2 model klasörü verilebilir.
 import argparse
 import json
 import os
+import subprocess
+
+import numpy as np
 
 from faster_whisper import WhisperModel
 
@@ -24,7 +27,9 @@ def main():
     cikti = a.cikti or os.path.splitext(a.ses)[0] + "_kelimeler.json"
 
     model = WhisperModel(a.model, device="cpu", compute_type="int8")
-    parcalar, bilgi = model.transcribe(a.ses, language=a.dil, word_timestamps=True, vad_filter=True)
+    # Ses ffmpeg ile 16 kHz mono'ya çözülür (faster-whisper'ın PyAV sürüm bağımlılığından kaçınmak için)
+    raw = subprocess.check_output(["ffmpeg", "-v", "error", "-i", a.ses, "-f", "f32le", "-ac", "1", "-ar", "16000", "-"])
+    parcalar, bilgi = model.transcribe(np.frombuffer(raw, np.float32), language=a.dil, word_timestamps=True, vad_filter=True)
     words = []
     for p in parcalar:
         for w in p.words:

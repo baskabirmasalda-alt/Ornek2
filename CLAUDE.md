@@ -30,8 +30,9 @@ söz öbeklerine bağlanır, zamanı kelime dökümünden bulunur.
 ## Ortam notları
 - Bulut oturumunda `.claude/hooks/session-start.sh` Python sanal ortamını (`.venv`) ve Remotion'u kurar.
 - Remotion önceden kurulu Chromium'u kullanır (`video/remotion.config.ts`, `REMOTION_CHROME` ile değiştirilebilir).
-- whisper modelleri `huggingface.co`'dan, yt-dlp `youtube.com`'dan indirir; ortamın ağ izninde bu alan adları
-  açık olmalı. Kapalıysa kelime zamanları için ElevenLabs Scribe (0 kredi) kullanılır.
+- whisper modelleri `huggingface.co` ve `*.hf.co`'dan iner (açık). `yaziya_dok.py` ~35 sn'de 1 dk sesi çözer.
+- yt-dlp `youtube.com` listelerini/bilgilerini okur (`--flat-playlist --print`), ama bu ortamda video indirme
+  YouTube tarafından 403 ile engelleniyor (veri merkezi IP'si). İndirilecek videoyu kullanıcı yükler.
 - Görsel, ses, müzik üretimi ElevenLabs bağlantısıyla yapılır; kredi kurallarına uy (stil rehberi).
 - Büyük çıktılar git'e girmez (`*_uzun.mp4`, `.venv`, `node_modules`); GitHub için `_github.mp4` sıkıştırılmış kopya (crf 29).
 - Commit mesajları Türkçe.
