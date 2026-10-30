@@ -8,16 +8,17 @@ import {execFileSync} from 'node:child_process';
 
 const [, , id, veriYolu, cikti, ...ekler] = process.argv;
 const veri = JSON.parse(fs.readFileSync(veriYolu, 'utf8'));
-const tarayici = process.env.REMOTION_CHROME ?? '/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell';
+const varsayilan = '/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell';
+const tarayici = process.env.REMOTION_CHROME ?? (fs.existsSync(varsayilan) ? varsayilan : null);
 const anlar = veri.planlar.map((p, i) => ({t: (p.bas + p.bit) / 2, ad: `${i + 1}. plan · sahne ${p.sahne} · ${p.hareket}`}));
 for (const e of ekler) anlar.push({t: Number(e), ad: `ek ${e} sn`});
 const serve = await bundle({entryPoint: path.resolve('src/Root.tsx')});
-const comp = await selectComposition({serveUrl: serve, id, browserExecutable: tarayici});
+const comp = await selectComposition({serveUrl: serve, id, browserExecutable: tarayici ?? undefined});
 const klasor = fs.mkdtempSync(path.join(process.env.TMPDIR ?? '/tmp', 'kare-'));
 const kareler = [];
 for (const [i, a] of anlar.entries()) {
   const dosya = path.join(klasor, `k${String(i).padStart(2, '0')}.png`);
-  await renderStill({composition: comp, serveUrl: serve, output: dosya, frame: Math.round(a.t * comp.fps), scale: 0.5, browserExecutable: tarayici});
+  await renderStill({composition: comp, serveUrl: serve, output: dosya, frame: Math.round(a.t * comp.fps), scale: 0.5, browserExecutable: tarayici ?? undefined});
   kareler.push({dosya, ad: `${a.ad} · ${a.t.toFixed(1)} sn`});
   console.log('kare', i + 1, '/', anlar.length);
 }

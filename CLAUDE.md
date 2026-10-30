@@ -30,6 +30,7 @@ Kurgu dosyası (`plan/kurgu_*.json`) her iki render aracında aynıdır: planlar
 söz öbeklerine bağlanır, zamanı kelime dökümünden bulunur.
 
 ## Ortam notları
+- Bilgisayarda kurulum ve son durum: `plan/DEVIR_NOTU.md`.
 - Bulut oturumunda `.claude/hooks/session-start.sh` Python sanal ortamını (`.venv`) ve Remotion'u kurar.
 - Remotion önceden kurulu Chromium'u kullanır (`video/remotion.config.ts`, `REMOTION_CHROME` ile değiştirilebilir).
 - whisper modelleri `huggingface.co` ve `*.hf.co`'dan iner (açık). `yaziya_dok.py` ~35 sn'de 1 dk sesi çözer.
