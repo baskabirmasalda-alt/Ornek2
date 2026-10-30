@@ -9,7 +9,7 @@ Kaynak: YouTube Analytics (Supermetrics bağlantısı), son 12 ay / son 30 gün.
 | Son 12 ay izlenme süresi | **419 dakika (~7 saat)** |
 | Abone (Studio'da) | ~34 · son 12 ayda net değişim: 0 (+1 / −1) |
 | En iyi içerik | Shorts: "Kurt aslında iyi biriyse?" 1.260 izlenme (%76 izlenme oranı), "Avcı yoktu" 1.204 (%57) |
-| Uzun videolar | Kırmızı Başlıklı Kız 14 izlenme (ort. 1:43, %24) · Külkedisi 5 izlenme (ort. 7 sn) · Pamuk Prenses **0** |
+| Uzun videolar | Kırmızı Başlıklı Kız 14 izlenme (ort. 1:43, %24) · Külkedisi 5 izlenme (ort. 7 sn) · Pamuk Prenses **129** (Studio, 30 Ekim; API verisi 2–3 gün gecikmeli) |
 
 Günlük grafik: 18 ve 20 Ekim'de Shorts sayesinde ~1.200'er görüntüleme, 21 Ekim'de 314, sonra günde 1–12.
 Yani kanalın tek keşif kaynağı Shorts ve ilk iki Shorts'tan sonra bu motor durdu.
@@ -21,7 +21,7 @@ Yani kanalın tek keşif kaynağı Shorts ve ilk iki Shorts'tan sonra bu motor d
    Uzunluk ve ilk cümle sorunu; yeni kural (≤25 sn, soruyla başla) 29 Ekim'den itibaren uygulanıyor.
 3. **Uzun videolar keşfedilmiyor:** gösterim çok az (Kırmızı Başlıklı Kız 5 günde 57 gösterim). Kapak/başlık
    tıklanıyor (%7 TO), sorun dağıtım. Kanal çocuk içeriğinden yeni konsepte geçtiği için YouTube kitleyi yeniden öğreniyor.
-4. **Pamuk Prenses 0 izlenme:** veride "public" görünüyor; prömiyerin gerçekleşip gerçekleşmediği Studio'da kontrol edilmeli.
+4. **Not:** Analytics API verisi 2–3 gün geriden geliyor. Pamuk Prenses 28 Ekim prömiyerinden sonra 129 izlenmeye ulaştı (Studio); kanalın en iyi uzun videosu.
 5. **Eski çocuk videoları:** "Küçük Kahraman Mete" ve "Minik Tavşan Tonton" hâlâ herkese açık; kanal sinyalini karıştırıyor.
 
 ## 3. Para kazanma şartları (YouTube İş Ortağı Programı)
