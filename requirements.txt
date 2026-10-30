@@ -1,0 +1,5 @@
+# Başka Bir Masalda – Python araçları
+numpy
+Pillow
+yt-dlp
+faster-whisper

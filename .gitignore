@@ -4,3 +4,7 @@ b0*_*.wav
 *.log
 baska_bir_masalda_b0*_uzun.mp4
 *_ses.wav
+.venv/
+video/node_modules/
+video/out/
+indirilen/
