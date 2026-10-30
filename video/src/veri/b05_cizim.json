@@ -1,0 +1,890 @@
+{
+ "sure": 57.54,
+ "ses": "assets/b05/ses/anlatim_a.mp3",
+ "muzik": "assets/b05/muzik/kanca.mp3",
+ "sahneler": "assets/b05/sahneler",
+ "planlar": [
+  {
+   "bas": 0,
+   "sahne": 1,
+   "hareket": "yakin",
+   "odak": [
+    0.5,
+    0.55
+   ],
+   "bit": 3.1500000000000004
+  },
+  {
+   "bas": 3.1500000000000004,
+   "sahne": 8,
+   "hareket": "uzak",
+   "odak": [
+    0.46,
+    0.4
+   ],
+   "bit": 8.014
+  },
+  {
+   "bas": 8.014,
+   "sahne": 2,
+   "hareket": "sag",
+   "odak": [
+    0.6,
+    0.5
+   ],
+   "bit": 12.43
+  },
+  {
+   "bas": 12.43,
+   "sahne": 3,
+   "hareket": "yakin",
+   "odak": [
+    0.58,
+    0.5
+   ],
+   "bit": 17.07
+  },
+  {
+   "bas": 17.07,
+   "sahne": 3,
+   "hareket": "vurgu",
+   "odak": [
+    0.416,
+    0.416
+   ],
+   "bit": 20.323
+  },
+  {
+   "bas": 20.323,
+   "sahne": 4,
+   "hareket": "uzak",
+   "odak": [
+    0.58,
+    0.46
+   ],
+   "bit": 23.07
+  },
+  {
+   "bas": 23.07,
+   "sahne": 5,
+   "hareket": "yakin",
+   "odak": [
+    0.6,
+    0.45
+   ],
+   "bit": 26.189999999999998
+  },
+  {
+   "bas": 26.189999999999998,
+   "sahne": 5,
+   "hareket": "detay",
+   "odak": [
+    0.645,
+    0.42
+   ],
+   "bit": 28.798
+  },
+  {
+   "bas": 28.798,
+   "sahne": 6,
+   "hareket": "sol",
+   "odak": [
+    0.5,
+    0.55
+   ],
+   "bit": 31.79
+  },
+  {
+   "bas": 31.79,
+   "sahne": 6,
+   "hareket": "vurgu",
+   "odak": [
+    0.41,
+    0.47
+   ],
+   "bit": 35.150000000000006
+  },
+  {
+   "bas": 35.150000000000006,
+   "sahne": 1,
+   "hareket": "sag",
+   "odak": [
+    0.35,
+    0.45
+   ],
+   "bit": 38.99
+  },
+  {
+   "bas": 38.99,
+   "sahne": 8,
+   "hareket": "uzak",
+   "odak": [
+    0.46,
+    0.45
+   ],
+   "bit": 41.203
+  },
+  {
+   "bas": 41.203,
+   "sahne": 8,
+   "hareket": "vurgu",
+   "odak": [
+    0.458,
+    0.34
+   ],
+   "bit": 44.910000000000004
+  },
+  {
+   "bas": 44.910000000000004,
+   "sahne": 9,
+   "hareket": "yakin",
+   "odak": [
+    0.5,
+    0.65
+   ],
+   "bit": 50.190000000000005
+  },
+  {
+   "bas": 50.190000000000005,
+   "sahne": 9,
+   "hareket": "vurgu",
+   "odak": [
+    0.448,
+    0.713
+   ],
+   "bit": 52.510000000000005
+  },
+  {
+   "bas": 52.510000000000005,
+   "sahne": 1,
+   "hareket": "uzak",
+   "odak": [
+    0.5,
+    0.5
+   ],
+   "bit": 57.54
+  }
+ ],
+ "vurgular": [
+  {
+   "bas": 4.4,
+   "sure": 1,
+   "satirlar": [
+    {
+     "metin": "Elsa yok",
+     "renk": "beyaz"
+    }
+   ]
+  },
+  {
+   "bas": 5.52,
+   "sure": 1,
+   "satirlar": [
+    {
+     "metin": "Anna yok",
+     "renk": "beyaz"
+    }
+   ]
+  },
+  {
+   "bas": 6.56,
+   "sure": 1.2,
+   "satirlar": [
+    {
+     "metin": "Olaf yok!",
+     "renk": "kirmizi"
+    }
+   ]
+  },
+  {
+   "bas": 8.32,
+   "sure": 2.4,
+   "satirlar": [
+    {
+     "metin": "1844",
+     "renk": "altin"
+    },
+    {
+     "metin": "Kopenhag",
+     "renk": "beyaz"
+    }
+   ]
+  },
+  {
+   "bas": 34.16,
+   "sure": 1.6,
+   "satirlar": [
+    {
+     "metin": "Gerda",
+     "renk": "altin"
+    }
+   ]
+  },
+  {
+   "bas": 36.36,
+   "sure": 2.2,
+   "satirlar": [
+    {
+     "metin": "70 yıldan fazla",
+     "renk": "altin"
+    }
+   ]
+  },
+  {
+   "bas": 43.28,
+   "sure": 2,
+   "satirlar": [
+    {
+     "metin": "Kötü kraliçe → kahraman",
+     "renk": "beyaz"
+    }
+   ]
+  },
+  {
+   "bas": 48.56,
+   "sure": 2,
+   "satirlar": [
+    {
+     "metin": "3 sır",
+     "renk": "altin"
+    }
+   ]
+  }
+ ],
+ "efektler": [
+  {
+   "bas": 4.4,
+   "dosya": "assets/b05/sfx/vurus.mp3",
+   "ses": 0.55
+  },
+  {
+   "bas": 5.52,
+   "dosya": "assets/b05/sfx/vurus.mp3",
+   "ses": 0.55
+  },
+  {
+   "bas": 6.56,
+   "dosya": "assets/b05/sfx/vurus.mp3",
+   "ses": 0.8
+  },
+  {
+   "bas": 8.32,
+   "dosya": "assets/b05/sfx/vurus.mp3",
+   "ses": 0.7
+  },
+  {
+   "bas": 21.39,
+   "dosya": "assets/b05/sfx/ayna.mp3",
+   "ses": 0.9
+  },
+  {
+   "bas": 27.28,
+   "dosya": "assets/b05/sfx/buz.mp3",
+   "ses": 0.7
+  },
+  {
+   "bas": 34.16,
+   "dosya": "assets/b05/sfx/vurus.mp3",
+   "ses": 0.7
+  },
+  {
+   "bas": 43.28,
+   "dosya": "assets/b05/sfx/vurus.mp3",
+   "ses": 0.8
+  },
+  {
+   "bas": 44.76,
+   "dosya": "assets/b05/sfx/sayfa.mp3",
+   "ses": 0.6
+  },
+  {
+   "bas": 48.56,
+   "dosya": "assets/b05/sfx/vurus.mp3",
+   "ses": 0.7
+  },
+  {
+   "bas": 53.36,
+   "dosya": "assets/b05/sfx/vurus.mp3",
+   "ses": 0.9
+  }
+ ],
+ "sessizlik": [
+  {
+   "bas": 21.44,
+   "sure": 1
+  },
+  {
+   "bas": 33.04,
+   "sure": 0.8
+  },
+  {
+   "bas": 43.28,
+   "sure": 1.1
+  },
+  {
+   "bas": 53.36,
+   "sure": 0.9
+  }
+ ],
+ "animasyonlar": [
+  {
+   "tur": "kirilma",
+   "bas": 21.44
+  },
+  {
+   "tur": "parca",
+   "bas": 23.12
+  },
+  {
+   "tur": "buz",
+   "bas": 27.28
+  },
+  {
+   "tur": "sayfa",
+   "bas": 44.96
+  }
+ ],
+ "gecis_sesi": "assets/b05/sfx/vuus.mp3",
+ "kelimeler": [
+  {
+   "text": "Bu",
+   "start": 0.08,
+   "end": 0.16
+  },
+  {
+   "text": "masalı",
+   "start": 0.28,
+   "end": 0.64
+  },
+  {
+   "text": "Frozen'dan",
+   "start": 0.88,
+   "end": 1.44
+  },
+  {
+   "text": "bildiğini",
+   "start": 1.52,
+   "end": 2
+  },
+  {
+   "text": "sanıyorsun.",
+   "start": 2.08,
+   "end": 2.651
+  },
+  {
+   "text": "Ama",
+   "start": 3.2,
+   "end": 3.44
+  },
+  {
+   "text": "orijinalinde",
+   "start": 3.52,
+   "end": 4.24
+  },
+  {
+   "text": "Elsa",
+   "start": 4.4,
+   "end": 4.72
+  },
+  {
+   "text": "yok.",
+   "start": 4.8,
+   "end": 5.32
+  },
+  {
+   "text": "Anna",
+   "start": 5.52,
+   "end": 5.84
+  },
+  {
+   "text": "yok.",
+   "start": 5.92,
+   "end": 6.24
+  },
+  {
+   "text": "Olaf",
+   "start": 6.56,
+   "end": 6.96
+  },
+  {
+   "text": "yok.",
+   "start": 7.04,
+   "end": 7.44
+  },
+  {
+   "text": "Yıl",
+   "start": 8.064,
+   "end": 8.24
+  },
+  {
+   "text": "1844.",
+   "start": 8.32,
+   "end": 9.72
+  },
+  {
+   "text": "Kopenhag.",
+   "start": 9.92,
+   "end": 10.72
+  },
+  {
+   "text": "Hans",
+   "start": 10.96,
+   "end": 11.2
+  },
+  {
+   "text": "Christian",
+   "start": 11.28,
+   "end": 11.68
+  },
+  {
+   "text": "Andersen,",
+   "start": 11.76,
+   "end": 12.36
+  },
+  {
+   "text": "kötü",
+   "start": 12.48,
+   "end": 12.68
+  },
+  {
+   "text": "kalpli",
+   "start": 12.72,
+   "end": 13
+  },
+  {
+   "text": "bir",
+   "start": 13.04,
+   "end": 13.12
+  },
+  {
+   "text": "trolün",
+   "start": 13.2,
+   "end": 13.52
+  },
+  {
+   "text": "yaptığı",
+   "start": 13.56,
+   "end": 14
+  },
+  {
+   "text": "büyülü",
+   "start": 14.16,
+   "end": 14.48
+  },
+  {
+   "text": "bir",
+   "start": 14.56,
+   "end": 14.64
+  },
+  {
+   "text": "aynayla",
+   "start": 14.72,
+   "end": 15.12
+  },
+  {
+   "text": "başlayan",
+   "start": 15.16,
+   "end": 15.6
+  },
+  {
+   "text": "bir",
+   "start": 15.64,
+   "end": 15.68
+  },
+  {
+   "text": "masal",
+   "start": 15.76,
+   "end": 16.08
+  },
+  {
+   "text": "yazıyor.",
+   "start": 16.16,
+   "end": 16.84
+  },
+  {
+   "text": "Bu",
+   "start": 17.12,
+   "end": 17.2
+  },
+  {
+   "text": "ayna,",
+   "start": 17.28,
+   "end": 17.68
+  },
+  {
+   "text": "baktığı",
+   "start": 17.84,
+   "end": 18.24
+  },
+  {
+   "text": "her",
+   "start": 18.32,
+   "end": 18.48
+  },
+  {
+   "text": "şeyi",
+   "start": 18.56,
+   "end": 18.8
+  },
+  {
+   "text": "çirkin",
+   "start": 18.88,
+   "end": 19.2
+  },
+  {
+   "text": "gösteriyor.",
+   "start": 19.28,
+   "end": 20.04
+  },
+  {
+   "text": "Ve",
+   "start": 20.373,
+   "end": 20.4
+  },
+  {
+   "text": "bir",
+   "start": 20.48,
+   "end": 20.64
+  },
+  {
+   "text": "gün…",
+   "start": 20.72,
+   "end": 21.16
+  },
+  {
+   "text": "paramparça",
+   "start": 21.44,
+   "end": 22.08
+  },
+  {
+   "text": "oluyor.",
+   "start": 22.16,
+   "end": 22.8
+  },
+  {
+   "text": "Parçalardan",
+   "start": 23.12,
+   "end": 23.76
+  },
+  {
+   "text": "biri",
+   "start": 23.84,
+   "end": 24.08
+  },
+  {
+   "text": "küçük",
+   "start": 24.24,
+   "end": 24.56
+  },
+  {
+   "text": "Kay'in",
+   "start": 24.68,
+   "end": 24.96
+  },
+  {
+   "text": "gözüne",
+   "start": 25,
+   "end": 25.28
+  },
+  {
+   "text": "kaçıyor.",
+   "start": 25.36,
+   "end": 26.04
+  },
+  {
+   "text": "Ve",
+   "start": 26.24,
+   "end": 26.32
+  },
+  {
+   "text": "kalbi…",
+   "start": 26.4,
+   "end": 27.08
+  },
+  {
+   "text": "buz",
+   "start": 27.28,
+   "end": 27.44
+  },
+  {
+   "text": "gibi",
+   "start": 27.52,
+   "end": 27.68
+  },
+  {
+   "text": "soğuyor.",
+   "start": 27.76,
+   "end": 28.48
+  },
+  {
+   "text": "Onu",
+   "start": 28.848,
+   "end": 28.92
+  },
+  {
+   "text": "kurtarmak",
+   "start": 28.96,
+   "end": 29.44
+  },
+  {
+   "text": "için",
+   "start": 29.52,
+   "end": 29.76
+  },
+  {
+   "text": "dünyanın",
+   "start": 29.84,
+   "end": 30.24
+  },
+  {
+   "text": "kuzeyine",
+   "start": 30.32,
+   "end": 30.72
+  },
+  {
+   "text": "kim",
+   "start": 30.8,
+   "end": 30.96
+  },
+  {
+   "text": "yürüyor?",
+   "start": 31.04,
+   "end": 31.6
+  },
+  {
+   "text": "Bir",
+   "start": 31.84,
+   "end": 31.92
+  },
+  {
+   "text": "prens",
+   "start": 32,
+   "end": 32.32
+  },
+  {
+   "text": "değil.",
+   "start": 32.4,
+   "end": 32.84
+  },
+  {
+   "text": "Küçük",
+   "start": 33.04,
+   "end": 33.28
+  },
+  {
+   "text": "bir",
+   "start": 33.36,
+   "end": 33.44
+  },
+  {
+   "text": "kız:",
+   "start": 33.52,
+   "end": 33.84
+  },
+  {
+   "text": "Gerda.",
+   "start": 34.16,
+   "end": 34.88
+  },
+  {
+   "text": "Disney",
+   "start": 35.2,
+   "end": 35.6
+  },
+  {
+   "text": "bu",
+   "start": 35.68,
+   "end": 35.76
+  },
+  {
+   "text": "masalı",
+   "start": 35.88,
+   "end": 36.24
+  },
+  {
+   "text": "yetmiş",
+   "start": 36.36,
+   "end": 36.64
+  },
+  {
+   "text": "yıldan",
+   "start": 36.72,
+   "end": 37.04
+  },
+  {
+   "text": "uzun",
+   "start": 37.12,
+   "end": 37.28
+  },
+  {
+   "text": "süre",
+   "start": 37.36,
+   "end": 37.6
+  },
+  {
+   "text": "film",
+   "start": 37.72,
+   "end": 37.84
+  },
+  {
+   "text": "yapmaya",
+   "start": 37.88,
+   "end": 38.24
+  },
+  {
+   "text": "çalıştı.",
+   "start": 38.28,
+   "end": 38.88
+  },
+  {
+   "text": "Ve",
+   "start": 39.04,
+   "end": 39.12
+  },
+  {
+   "text": "sonunda",
+   "start": 39.2,
+   "end": 39.68
+  },
+  {
+   "text": "Frozen",
+   "start": 39.92,
+   "end": 40.32
+  },
+  {
+   "text": "doğdu.",
+   "start": 40.4,
+   "end": 40.96
+  },
+  {
+   "text": "Ama",
+   "start": 41.253,
+   "end": 41.36
+  },
+  {
+   "text": "yolda,",
+   "start": 41.44,
+   "end": 42
+  },
+  {
+   "text": "kötü",
+   "start": 42.16,
+   "end": 42.36
+  },
+  {
+   "text": "kraliçe…",
+   "start": 42.4,
+   "end": 43.12
+  },
+  {
+   "text": "kahramana",
+   "start": 43.28,
+   "end": 43.84
+  },
+  {
+   "text": "dönüştü.",
+   "start": 43.92,
+   "end": 44.64
+  },
+  {
+   "text": "Bu",
+   "start": 44.96,
+   "end": 45.04
+  },
+  {
+   "text": "akşam",
+   "start": 45.12,
+   "end": 45.44
+  },
+  {
+   "text": "sana",
+   "start": 45.52,
+   "end": 45.92
+  },
+  {
+   "text": "Karlar",
+   "start": 46.04,
+   "end": 46.32
+  },
+  {
+   "text": "Kraliçesi'nin",
+   "start": 46.4,
+   "end": 47.12
+  },
+  {
+   "text": "kimsenin",
+   "start": 47.28,
+   "end": 47.76
+  },
+  {
+   "text": "bilmediği",
+   "start": 47.84,
+   "end": 48.48
+  },
+  {
+   "text": "üç",
+   "start": 48.56,
+   "end": 48.68
+  },
+  {
+   "text": "sırrını",
+   "start": 48.72,
+   "end": 49.12
+  },
+  {
+   "text": "anlatacağım.",
+   "start": 49.2,
+   "end": 50
+  },
+  {
+   "text": "Üçüncüsü",
+   "start": 50.24,
+   "end": 50.8
+  },
+  {
+   "text": "hiçbir",
+   "start": 51.04,
+   "end": 51.44
+  },
+  {
+   "text": "kitapta",
+   "start": 51.52,
+   "end": 51.84
+  },
+  {
+   "text": "yok.",
+   "start": 51.92,
+   "end": 52.32
+  },
+  {
+   "text": "Çünkü",
+   "start": 52.56,
+   "end": 52.88
+  },
+  {
+   "text": "o,",
+   "start": 52.96,
+   "end": 53.24
+  },
+  {
+   "text": "başka",
+   "start": 53.36,
+   "end": 53.68
+  },
+  {
+   "text": "bir",
+   "start": 53.72,
+   "end": 53.76
+  },
+  {
+   "text": "masalda",
+   "start": 53.84,
+   "end": 54.24
+  },
+  {
+   "text": "geçiyor.",
+   "start": 54.32,
+   "end": 55.04
+  }
+ ]
+}

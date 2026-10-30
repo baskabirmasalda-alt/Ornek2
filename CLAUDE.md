@@ -20,6 +20,8 @@ uzun bölüm, Shorts, kapak ve yükleme metinleri bu klasörde üretilir. Konsep
 | --- | --- |
 | `make_v2.py` | Yeni tempo render (Python/Pillow): `python3 make_v2.py plan/kurgu_b05_pilot.json` |
 | `video/` (Remotion) | `cd video && node hazirla.mjs ../plan/kurgu_X.json src/veri/X.json` → `npx remotion render src/Root.tsx <Kompozisyon> out/x.mp4` · Önizleme: `npx remotion studio src/Root.tsx` |
+| `video/kontrol_sayfasi.mjs` | Render öncesi kontrol: her plandan bir kare, tek sayfa: `node kontrol_sayfasi.mjs <Kompozisyon> src/veri/X.json kontrol.jpg [ek_sn...]` |
+| `video/src/cizim/` | Görsel modeli olmadan kodla (SVG) çizilen sahne ve karakterler (`KarlarKralicesiCizim`, `KarakterSayfasi`) |
 | `yaziya_dok.py` | Kelime zamanlı yazıya dökme (faster-whisper): `.venv/bin/python yaziya_dok.py ses.mp3` |
 | `video_indir.sh` | Video indirme (yt-dlp + ffmpeg): `./video_indir.sh <url>` |
 | `make_kapak.py` | Kapak (1280x720), `make_marka.py` banner/logo, `make_uzun.py`/`make_shorts.py` eski düzen |
